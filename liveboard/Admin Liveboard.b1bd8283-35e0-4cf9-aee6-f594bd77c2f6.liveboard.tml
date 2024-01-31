@@ -196,6 +196,49 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e0aeb83a-9950-44be-b693-e3c17f5f2159\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"44947f30-e911-4338-b6eb-6f837d3538b6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#747E8C\"}]}"
       display_mode: CHART_MODE
     viz_guid: dc687e97-2d95-4073-be8d-d8ab4d4545f6
+  - id: Viz_6
+    answer:
+      name: Total Extended Price by Color and Category
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Extended Price] [Color] [Category]"
+      answer_columns:
+      - name: Total Extended Price
+      - name: Color
+      - name: Category
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Color
+        - Category
+        - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Color
+        - column_id: Category
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Color
+          "y":
+          - Total Extended Price
+          color:
+          - Category
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8dfac75c-7f04-4573-8155-53f526ce74af\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"b54a176f-abc2-4302-8d66-f12842c566ce\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#11\",\"color\": \"#47515F\"},{\"serieName\": \"mfgr#12\",\"color\": \"#BEC6D0\"},{\"serieName\": \"mfgr#13\",\"color\": \"#747E8C\"},{\"serieName\": \"mfgr#14\",\"color\": \"#C26232\"},{\"serieName\": \"mfgr#15\",\"color\": \"#FFCCB3\"},{\"serieName\": \"mfgr#21\",\"color\": \"#FF8142\"},{\"serieName\": \"mfgr#22\",\"color\": \"#6A4ABA\"},{\"serieName\": \"mfgr#23\",\"color\": \"#D1C0FB\"},{\"serieName\": \"mfgr#24\",\"color\": \"#8C62F5\"},{\"serieName\": \"mfgr#25\",\"color\": \"#56D3A8\"},{\"serieName\": \"mfgr#31\",\"color\": \"#049160\"},{\"serieName\": \"mfgr#32\",\"color\": \"#9BE5CB\"},{\"serieName\": \"mfgr#33\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#34\",\"color\": \"#FCD977\"},{\"serieName\": \"mfgr#35\",\"color\": \"#BF982A\"},{\"serieName\": \"mfgr#41\",\"color\": \"#FDE9AF\"},{\"serieName\": \"mfgr#42\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#43\",\"color\": \"#82DFE9\"},{\"serieName\": \"mfgr#44\",\"color\": \"#369FAA\"},{\"serieName\": \"mfgr#45\",\"color\": \"#B5ECF2\"},{\"serieName\": \"mfgr#51\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#52\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#53\",\"color\": \"#2359B6\"},{\"serieName\": \"mfgr#54\",\"color\": \"#ABC7F9\"},{\"serieName\": \"mfgr#55\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 79715588-fbdb-4fd6-9b32-c3227cf2bc74
   layout:
     tiles:
     - visualization_id: Viz_1
