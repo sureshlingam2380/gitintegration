@@ -128,6 +128,38 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Ship Mode\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4fd4dd3e-ec63-49eb-9738-41ada67749c3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"a460531a-8ff6-4465-9843-3880bf5c06ac\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": true}},{\"id\": \"fa619c47-bf28-48a8-85e8-bd78e9db6a8c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Ship Mode\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Supply Cost\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 7f01be15-79aa-4dbb-8f8a-9249372ca4f5
+  - id: Viz_4
+    answer:
+      name: Total Discount
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Order Total Price]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Order Total Price
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        - Total Order Total Price
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Order Total Price
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: cc276eda-1381-47e9-ac71-09616151ed0e
   layout:
     tiles:
     - visualization_id: Viz_1
