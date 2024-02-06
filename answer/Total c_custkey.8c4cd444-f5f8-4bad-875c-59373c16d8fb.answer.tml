@@ -1,0 +1,28 @@
+guid: 8c4cd444-f5f8-4bad-875c-59373c16d8fb
+answer:
+  name: Total c_custkey
+  tables:
+  - id: tpch5k_falcon_default_schema_customer
+    name: tpch5k_falcon_default_schema_customer
+    fqn: f649fe81-7904-4372-8cb8-8fae219193a3
+  search_query: "[c_custkey]"
+  answer_columns:
+  - name: Total c_custkey
+  table:
+    table_columns:
+    - column_id: Total c_custkey
+      show_headline: false
+    ordered_column_ids:
+    - Total c_custkey
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total c_custkey
+    axis_configs:
+    - "y":
+      - Total c_custkey
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total c_custkey\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"318cbeee-5d90-4874-a200-91ef2bbe8d48\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total c_custkey\"],\"isOpposite\": false}},{\"id\": \"b09f0328-8e6c-4dea-b134-e3c0e3d24905\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
