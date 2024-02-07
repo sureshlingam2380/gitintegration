@@ -45,6 +45,55 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"211962b2-1b22-4ab5-866b-4d3008ba6e8d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"d25f3b8f-bc53-48c1-ba56-bfd1240013f4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Discount\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: d2da64f6-16f4-4c61-996a-0fd2f0761811
+  - id: Viz_2
+    answer:
+      name: Total Extended Price by Total Discount
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Extended Price] [Brand1] [Supply Cost]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Extended Price
+      - name: Brand1
+      - name: Total Supply Cost
+      table:
+        table_columns:
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Brand1
+        - Total Discount
+        - Total Extended Price
+        - Total Supply Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BUBBLE
+        chart_columns:
+        - column_id: Brand1
+        - column_id: Total Discount
+        - column_id: Total Extended Price
+        - column_id: Total Supply Cost
+        axis_configs:
+        - x:
+          - Total Discount
+          "y":
+          - Total Extended Price
+          size: Total Supply Cost
+          category:
+          - Brand1
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"211962b2-1b22-4ab5-866b-4d3008ba6e8d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"d25f3b8f-bc53-48c1-ba56-bfd1240013f4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Discount\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5a4ecb93-78d1-4df9-9dc4-53e3612044f5
   layout:
     tabs:
     - name: Tab 1
@@ -55,3 +104,4 @@ liveboard:
         "y": 0
         height: 8
         width: 6
+      - visualization_id: Viz_2
