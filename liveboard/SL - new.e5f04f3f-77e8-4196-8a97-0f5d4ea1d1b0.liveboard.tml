@@ -1,6 +1,6 @@
 guid: e5f04f3f-77e8-4196-8a97-0f5d4ea1d1b0
 liveboard:
-  name: SL
+  name: SL - new
   visualizations:
   - id: Viz_1
     answer:
@@ -38,3 +38,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Lineorder Suppkey\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fa647002-c013-412f-aafd-45374bf5fc32\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"849c6f40-4a40-47ed-b719-20c5c4a97d97\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Lineorder Suppkey\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Order Total Price\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
     viz_guid: 26565629-6c14-4fe0-b57d-7db8111e2b2d
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
