@@ -1,0 +1,31 @@
+guid: c84eac1d-7964-4e12-b4b1-1027bd786631
+liveboard:
+  name: Test
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Extended Price
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Extended Price]"
+      answer_columns:
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Extended Price
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Extended Price
+        axis_configs:
+        - "y":
+          - Total Extended Price
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 3821eb59-770c-43f5-aa92-0fedf8cf3f67
