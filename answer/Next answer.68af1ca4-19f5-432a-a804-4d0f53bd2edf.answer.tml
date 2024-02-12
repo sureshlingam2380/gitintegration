@@ -2,34 +2,41 @@ guid: 68af1ca4-19f5-432a-a804-4d0f53bd2edf
 answer:
   name: Next answer
   tables:
-  - id: Chasmtrap
-    name: Chasmtrap
-    fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
-  search_query: "[Purchase Id] [Product Name]"
+  - id: Container Worksheet
+    name: Container Worksheet
+    fqn: 286933b5-fc30-46b8-9216-31f669f46a15
+  search_query: "[Extended Price] [Color] [Line Number]"
   answer_columns:
-  - name: Total Purchase Id
-  - name: Product Name
+  - name: Total Extended Price
+  - name: Color
+  - name: Line Number
   table:
     table_columns:
-    - column_id: Product Name
+    - column_id: Color
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Total Purchase Id
+    - column_id: Line Number
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Extended Price
       headline_aggregation: SUM
     ordered_column_ids:
-    - Product Name
-    - Total Purchase Id
+    - Color
+    - Line Number
+    - Total Extended Price
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: COLUMN
+    type: STACKED_COLUMN
     chart_columns:
-    - column_id: Product Name
-    - column_id: Total Purchase Id
+    - column_id: Color
+    - column_id: Line Number
+    - column_id: Total Extended Price
     axis_configs:
     - x:
-      - Product Name
+      - Color
       "y":
-      - Total Purchase Id
+      - Total Extended Price
+      color:
+      - Line Number
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Purchase Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2726fe34-82cc-42e2-9f73-3123ee777f71\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Purchase Id\"],\"isOpposite\": false}},{\"id\": \"cd016e29-d55b-4c59-998d-587130817c65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Purchase Id\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Line Number\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4cb16ab7-545b-42f6-b11e-5ccca4c0b864\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"015ce644-047c-45a9-b758-5cf9cb2488e1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#06BF7F\"},{\"serieName\": \"2\",\"color\": \"#FCD977\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"},{\"serieName\": \"4\",\"color\": \"#82DFE9\"},{\"serieName\": \"5\",\"color\": \"#48D1E0\"},{\"serieName\": \"6\",\"color\": \"#71A1F4\"},{\"serieName\": \"7\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
