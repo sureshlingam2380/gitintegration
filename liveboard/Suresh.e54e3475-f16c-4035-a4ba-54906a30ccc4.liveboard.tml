@@ -11,8 +11,8 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Category] [Tax]"
       answer_columns:
-      - name: Total Tax
       - name: Category
+      - name: Total Tax
       table:
         table_columns:
         - column_id: Category
@@ -27,8 +27,8 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Category
         - column_id: Total Tax
+        - column_id: Category
         axis_configs:
         - x:
           - Category
