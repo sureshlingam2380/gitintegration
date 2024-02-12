@@ -1,0 +1,75 @@
+guid: c0417e71-d164-40e8-b9ef-89f275ca2f23
+worksheet:
+  name: Worksheet_On_AggrWS_Table_With_Chasm_Trap
+  tables:
+  - name: CUSTOMER
+    fqn: 5de19354-710f-448e-8ed2-4315d926a264
+  - name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - name: RevenueAggrWs
+    fqn: 3559e287-424e-4397-b080-77c7ba6f395b
+  joins:
+  - name: Lineorder CustKey - Customer CustKey
+    source: LINEORDER
+    destination: CUSTOMER
+    type: INNER
+    is_one_to_one: false
+  - name: RevAggrWS-Customer
+    source: RevenueAggrWs
+    destination: CUSTOMER
+    type: INNER
+    is_one_to_one: false
+  table_paths:
+  - id: CUSTOMER_1
+    table: CUSTOMER
+    join_path:
+    - join:
+      - RevAggrWS-Customer
+    - join:
+      - Lineorder CustKey - Customer CustKey
+  - id: CUSTOMER_2
+    table: CUSTOMER
+    join_path:
+    - join:
+      - RevAggrWS-Customer
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: RevenueAggrWs_1
+    table: RevenueAggrWs
+    join_path:
+    - {}
+  formulas:
+  - name: "group_sum (total revenue , customer region )"
+    expr: "group_sum ( [RevenueAggrWs_1::Total Revenue] , [CUSTOMER_2::Customer Region] )"
+    was_auto_generated: false
+  worksheet_columns:
+  - name: Customer City
+    column_id: CUSTOMER_1::Customer City
+    properties:
+      column_type: ATTRIBUTE
+  - name: Discount
+    column_id: LINEORDER_1::Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Total Revenue
+    column_id: RevenueAggrWs_1::Total Revenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Month (Commit Date)
+    column_id: RevenueAggrWs_1::Month(Commit Date)
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MMM yyyy
+  - name: "group_sum (total revenue , customer region )"
+    formula_id: "group_sum (total revenue , customer region )"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true

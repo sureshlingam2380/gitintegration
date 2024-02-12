@@ -1,0 +1,40 @@
+guid: 4b7f25f7-703c-4da7-960a-f74531c9a6e8
+answer:
+  name: Suresh-ANS
+  tables:
+  - id: Worksheet_On_AggrWS_Table_With_Chasm_Trap
+    name: Worksheet_On_AggrWS_Table_With_Chasm_Trap
+    fqn: c0417e71-d164-40e8-b9ef-89f275ca2f23
+  search_query: "[Total Revenue] [Customer City] [Month (Commit Date)] [Month (Commit Date)].monthly"
+  answer_columns:
+  - name: Total Total Revenue
+  - name: Customer City
+  - name: Month(Month (Commit Date))
+  table:
+    table_columns:
+    - column_id: Customer City
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(Month (Commit Date))
+      headline_aggregation: MIN-MAX
+    - column_id: Total Total Revenue
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Customer City
+    - Month(Month (Commit Date))
+    - Total Total Revenue
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Customer City
+    - column_id: Month(Month (Commit Date))
+    - column_id: Total Total Revenue
+    axis_configs:
+    - x:
+      - Month(Month (Commit Date))
+      "y":
+      - Total Total Revenue
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Customer City\",\"columnProperty\": {}},{\"columnId\": \"Month(Month (Commit Date))\",\"columnProperty\": {}},{\"columnId\": \"Total Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"33519be2-b7fd-4b80-8d5f-4d028aa5af81\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Total Revenue\"],\"isOpposite\": false}},{\"id\": \"26bce2dc-3f2f-4b12-a268-84aaec2bd353\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Month (Commit Date))\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Total Revenue\",\"color\": \"#48D1E0\"}]}"
+  display_mode: CHART_MODE
