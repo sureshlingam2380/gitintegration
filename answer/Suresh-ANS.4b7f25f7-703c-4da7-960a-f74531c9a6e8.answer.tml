@@ -5,36 +5,42 @@ answer:
   - id: Worksheet_On_AggrWS_Table_With_Chasm_Trap
     name: Worksheet_On_AggrWS_Table_With_Chasm_Trap
     fqn: c0417e71-d164-40e8-b9ef-89f275ca2f23
-  search_query: "[Total Revenue] [Customer City] [Month (Commit Date)] [Month (Commit Date)].monthly"
+  search_query: "[Total Revenue] [Customer City] [Month (Commit Date)] [Month (Commit Date)].quarterly [group_sum (total revenue , customer region )]"
   answer_columns:
   - name: Total Total Revenue
   - name: Customer City
-  - name: Month(Month (Commit Date))
+  - name: Quarter(Month (Commit Date))
+  - name: "group_sum (total revenue , customer region )"
   table:
     table_columns:
     - column_id: Customer City
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Month(Month (Commit Date))
+    - column_id: Quarter(Month (Commit Date))
       headline_aggregation: MIN-MAX
     - column_id: Total Total Revenue
       headline_aggregation: SUM
+    - column_id: "group_sum (total revenue , customer region )"
+      headline_aggregation: TABLE_AGGR
     ordered_column_ids:
     - Customer City
-    - Month(Month (Commit Date))
+    - Quarter(Month (Commit Date))
     - Total Total Revenue
+    - "group_sum (total revenue , customer region )"
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
     type: LINE
     chart_columns:
     - column_id: Customer City
-    - column_id: Month(Month (Commit Date))
+    - column_id: Quarter(Month (Commit Date))
     - column_id: Total Total Revenue
+    - column_id: "group_sum (total revenue , customer region )"
     axis_configs:
     - x:
-      - Month(Month (Commit Date))
+      - Quarter(Month (Commit Date))
       "y":
       - Total Total Revenue
+      - "group_sum (total revenue , customer region )"
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Customer City\",\"columnProperty\": {}},{\"columnId\": \"Total Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Month(Month (Commit Date))\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9e4ce827-3bb1-436e-9889-a9f622cfbc49\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Total Revenue\"],\"isOpposite\": false}},{\"id\": \"c28b28d3-b468-4c63-a3ce-50e8c25b27ef\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Month (Commit Date))\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Total Revenue\",\"color\": \"#48D1E0\"},{\"serieName\": \"b6a0ed71-c613-4aa4-b0ab-f6186300d3b6\",\"color\": \"#FCC838\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Customer City\",\"columnProperty\": {}},{\"columnId\": \"Total Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Month (Commit Date))\",\"columnProperty\": {}},{\"columnId\": \"group_sum (total revenue , customer region )\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c9b896f6-eee1-4bb9-be15-7c901e201c7b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d8b1770f-8054-456e-a777-d8ec7498bf42\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"group_sum (total revenue , customer region )\"],\"isOpposite\": true}},{\"id\": \"ee6d61ac-9d9e-4c65-942c-cec737799fab\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Month (Commit Date))\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Total Revenue\",\"color\": \"#48D1E0\"},{\"serieName\": \"b6a0ed71-c613-4aa4-b0ab-f6186300d3b6\",\"color\": \"#FCC838\"},{\"serieName\": \"group_sum (total revenue , customer region )\",\"color\": \"#FCC838\"}]}"
   display_mode: CHART_MODE
