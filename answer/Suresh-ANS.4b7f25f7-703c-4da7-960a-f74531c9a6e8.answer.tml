@@ -5,48 +5,24 @@ answer:
   - id: Worksheet_On_AggrWS_Table_With_Chasm_Trap
     name: Worksheet_On_AggrWS_Table_With_Chasm_Trap
     fqn: c0417e71-d164-40e8-b9ef-89f275ca2f23
-  search_query: "[Total Revenue] [Customer City] [Month (Commit Date)] [Month (Commit Date)].quarterly [group_sum (total revenue , customer region )] [Discount]"
+  search_query: "[Discount]"
   answer_columns:
-  - name: Total Total Revenue
-  - name: Customer City
-  - name: Quarter(Month (Commit Date))
-  - name: "group_sum (total revenue , customer region )"
   - name: Total Discount
   table:
     table_columns:
-    - column_id: Customer City
-      headline_aggregation: COUNT_DISTINCT
-    - column_id: Quarter(Month (Commit Date))
-      headline_aggregation: MIN-MAX
-    - column_id: Total Total Revenue
-      headline_aggregation: SUM
-    - column_id: "group_sum (total revenue , customer region )"
-      headline_aggregation: TABLE_AGGR
     - column_id: Total Discount
       headline_aggregation: SUM
     ordered_column_ids:
-    - Customer City
-    - Quarter(Month (Commit Date))
-    - Total Total Revenue
-    - "group_sum (total revenue , customer region )"
     - Total Discount
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: LINE
+    type: KPI
     chart_columns:
-    - column_id: Customer City
-    - column_id: Quarter(Month (Commit Date))
-    - column_id: Total Total Revenue
-    - column_id: "group_sum (total revenue , customer region )"
     - column_id: Total Discount
     axis_configs:
-    - x:
-      - Quarter(Month (Commit Date))
-      "y":
-      - Total Total Revenue
-      - "group_sum (total revenue , customer region )"
+    - "y":
       - Total Discount
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Customer City\",\"columnProperty\": {}},{\"columnId\": \"Total Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Month (Commit Date))\",\"columnProperty\": {}},{\"columnId\": \"group_sum (total revenue , customer region )\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"561677c6-1b0a-4106-a029-db3cf2ca5eda\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Total Revenue\"],\"isOpposite\": false}},{\"id\": \"a7dbba4b-f460-48fe-a937-cfded71d2768\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"group_sum (total revenue , customer region )\"],\"isOpposite\": true}},{\"id\": \"164cd483-bc9b-47cf-ad02-db0c38819c78\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": true}},{\"id\": \"d106781f-4cb3-4a4e-9539-16e40b4e7231\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Month (Commit Date))\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Total Revenue\",\"color\": \"#48D1E0\"},{\"serieName\": \"b6a0ed71-c613-4aa4-b0ab-f6186300d3b6\",\"color\": \"#FCC838\"},{\"serieName\": \"group_sum (total revenue , customer region )\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Discount\",\"color\": \"#8C62F5\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dd75ec56-b62b-41ec-9fac-781ff292960e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"1d03dde3-3429-47bf-85d0-f26f196174db\",\"properties\": {\"axisType\": \"X\"}}]}"
   display_mode: CHART_MODE
