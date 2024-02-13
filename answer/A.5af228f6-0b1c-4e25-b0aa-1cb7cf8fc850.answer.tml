@@ -5,12 +5,13 @@ answer:
   - id: Chasmtrap
     name: Chasmtrap
     fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
-  search_query: "[Product Id] [Product Name] [purchases Product Id] [Sale Id]"
+  search_query: "[Product Id] [Product Name] [purchases Product Id] [Sale Id] [Sale Cost]"
   answer_columns:
   - name: Product Id
   - name: Product Name
   - name: purchases Product Id
   - name: Total Sale Id
+  - name: Total Sale Cost
   table:
     table_columns:
     - column_id: Product Id
@@ -21,11 +22,14 @@ answer:
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Sale Id
       headline_aggregation: SUM
+    - column_id: Total Sale Cost
+      headline_aggregation: SUM
     ordered_column_ids:
     - Product Id
     - Product Name
     - purchases Product Id
     - Total Sale Id
+    - Total Sale Cost
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
@@ -35,14 +39,13 @@ answer:
     - column_id: Product Name
     - column_id: purchases Product Id
     - column_id: Total Sale Id
+    - column_id: Total Sale Cost
     axis_configs:
     - x:
       - purchases Product Id
       "y":
       - Total Sale Id
-      color:
-      - Product Id
-      - Product Name
+      - Total Sale Cost
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"purchases Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"112d5cd0-c62a-4036-93a9-05297cc4c600\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Id\"],\"isOpposite\": false}},{\"id\": \"8c69e71e-88f4-4de8-8f0d-592ce7fda5ba\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"purchases Product Id\"]}}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"purchases Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"627aa2f6-2179-47a7-bdbe-75e3d76ab6ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Id\"],\"isOpposite\": false}},{\"id\": \"897bef71-7fcb-4fec-8f39-26a5d01d4160\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": true}},{\"id\": \"eb215be5-8930-49a9-abcc-825a44dd1e17\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"purchases Product Id\"]}}]}"
   display_mode: TABLE_MODE
