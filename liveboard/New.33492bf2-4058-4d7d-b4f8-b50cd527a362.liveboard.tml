@@ -11,8 +11,8 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Order Total Price] [Org Masked Revenue] [Brand1]"
       answer_columns:
-      - name: Brand1
       - name: Total Order Total Price
+      - name: Brand1
       - name: Total Org Masked Revenue
       table:
         table_columns:
@@ -32,8 +32,8 @@ liveboard:
         type: SCATTER
         chart_columns:
         - column_id: Total Order Total Price
-        - column_id: Total Org Masked Revenue
         - column_id: Brand1
+        - column_id: Total Org Masked Revenue
         axis_configs:
         - x:
           - Total Order Total Price
@@ -81,9 +81,47 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Employee_Rating\",\"columnProperty\": {}},{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d9bc22dc-3299-4339-87ab-e11dbd3a2b2a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"7ac6a1c5-e4c8-4f7d-993d-6c2bf0e947f4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Employee_Rating\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Agency Review_Rating\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
     viz_guid: d13b7c53-d8f3-487d-a663-c5d959179462
+  - id: Viz_3
+    answer:
+      name: Total Revenue by Color
+      tables:
+      - id: Lineorder Part - Inner
+        name: Lineorder Part - Inner
+        fqn: b7b6aa0d-9c04-40cf-8916-3329b559a402
+      search_query: "[Color] [Revenue]"
+      answer_columns:
+      - name: Total Revenue
+      - name: Color
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Color
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total Revenue
+        - column_id: Color
+        axis_configs:
+        - x:
+          - Color
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d3a0d488-d754-4095-abd9-c698c08fc426\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"7ecbf238-2440-4a19-be2f-369747c6926c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5fbf3d1a-d460-4133-8ba0-ed2ef4cfd589
   layout:
     tiles:
     - visualization_id: Viz_1
       size: MEDIUM
     - visualization_id: Viz_2
+      size: MEDIUM
+    - visualization_id: Viz_3
       size: MEDIUM
