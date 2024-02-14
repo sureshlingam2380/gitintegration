@@ -11,9 +11,9 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Extended Price] [Brand1] [Category]"
       answer_columns:
-      - name: Brand1
       - name: Category
       - name: Total Extended Price
+      - name: Brand1
       table:
         table_columns:
         - column_id: Brand1
