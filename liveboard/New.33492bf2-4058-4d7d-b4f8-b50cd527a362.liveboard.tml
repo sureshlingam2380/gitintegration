@@ -11,9 +11,9 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Order Total Price] [Org Masked Revenue] [Brand1]"
       answer_columns:
+      - name: Brand1
       - name: Total Order Total Price
       - name: Total Org Masked Revenue
-      - name: Brand1
       table:
         table_columns:
         - column_id: Brand1
@@ -31,9 +31,9 @@ liveboard:
       chart:
         type: SCATTER
         chart_columns:
-        - column_id: Brand1
         - column_id: Total Order Total Price
         - column_id: Total Org Masked Revenue
+        - column_id: Brand1
         axis_configs:
         - x:
           - Total Order Total Price
@@ -47,40 +47,40 @@ liveboard:
     viz_guid: b69139cd-e5f6-4241-b3a6-e5dd4848360d
   - id: Viz_2
     answer:
-      name: Total Revenue by Color
+      name: Total Agency Review_Rating by Employee_Rating
       tables:
-      - id: Lineorder Part - Inner
-        name: Lineorder Part - Inner
-        fqn: b7b6aa0d-9c04-40cf-8916-3329b559a402
-      search_query: "[Color] [Revenue]"
+      - id: Complex_Schema_Left_Outer_Join
+        name: Complex_Schema_Left_Outer_Join
+        fqn: 06521b6d-c035-451d-89bc-e0b0b20d5086
+      search_query: "[Agency Review_Rating] [Employee_Rating]"
       answer_columns:
-      - name: Color
-      - name: Total Revenue
+      - name: Total Agency Review_Rating
+      - name: Employee_Rating
       table:
         table_columns:
-        - column_id: Color
+        - column_id: Employee_Rating
           headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Revenue
+        - column_id: Total Agency Review_Rating
           headline_aggregation: SUM
         ordered_column_ids:
-        - Color
-        - Total Revenue
+        - Employee_Rating
+        - Total Agency Review_Rating
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Color
-        - column_id: Total Revenue
+        - column_id: Total Agency Review_Rating
+        - column_id: Employee_Rating
         axis_configs:
         - x:
-          - Color
+          - Employee_Rating
           "y":
-          - Total Revenue
+          - Total Agency Review_Rating
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d3a0d488-d754-4095-abd9-c698c08fc426\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"7ecbf238-2440-4a19-be2f-369747c6926c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#8C62F5\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Employee_Rating\",\"columnProperty\": {}},{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d9bc22dc-3299-4339-87ab-e11dbd3a2b2a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"7ac6a1c5-e4c8-4f7d-993d-6c2bf0e947f4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Employee_Rating\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Agency Review_Rating\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
-    viz_guid: 5fbf3d1a-d460-4133-8ba0-ed2ef4cfd589
+    viz_guid: d13b7c53-d8f3-487d-a663-c5d959179462
   layout:
     tiles:
     - visualization_id: Viz_1
