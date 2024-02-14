@@ -1,3 +1,47 @@
 guid: 33492bf2-4058-4d7d-b4f8-b50cd527a362
 liveboard:
   name: New
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Org Masked Revenue by Total Order Total Price
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Order Total Price] [Org Masked Revenue] [Brand1]"
+      answer_columns:
+      - name: Total Order Total Price
+      - name: Total Org Masked Revenue
+      - name: Brand1
+      table:
+        table_columns:
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        - column_id: Total Org Masked Revenue
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Brand1
+        - Total Order Total Price
+        - Total Org Masked Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Brand1
+        - column_id: Total Order Total Price
+        - column_id: Total Org Masked Revenue
+        axis_configs:
+        - x:
+          - Total Order Total Price
+          "y":
+          - Total Org Masked Revenue
+          category:
+          - Brand1
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}},{\"columnId\": \"Total Org Masked Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"289c8bac-de2b-4a0d-a6a7-e8eb08a36116\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Org Masked Revenue\"],\"isOpposite\": false}},{\"id\": \"7f8a8e5c-cf13-4294-8a0d-56d879397219\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Order Total Price\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Org Masked Revenue\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: b69139cd-e5f6-4241-b3a6-e5dd4848360d
