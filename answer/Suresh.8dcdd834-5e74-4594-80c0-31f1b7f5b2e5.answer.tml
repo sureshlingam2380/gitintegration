@@ -7,10 +7,10 @@ answer:
     fqn: cf77e380-ce56-4276-aa7f-bcff505021fd
   search_query: "[Revenue] [Container] [Lineorder Custkey] [Manufacturer]"
   answer_columns:
-  - name: Total Revenue
-  - name: Lineorder Custkey
-  - name: Container
   - name: Manufacturer
+  - name: Container
+  - name: Lineorder Custkey
+  - name: Total Revenue
   table:
     table_columns:
     - column_id: Container
