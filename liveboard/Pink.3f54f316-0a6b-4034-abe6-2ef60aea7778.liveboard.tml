@@ -11,8 +11,8 @@ liveboard:
         fqn: 7c9d6e4d-cee4-4d03-a062-62e26804ac02
       search_query: "[Product Group_KEY] [Product Group_NAME] [PRODUCT_KEY]"
       answer_columns:
-      - name: Product Group_NAME
       - name: Product Group_KEY
+      - name: Product Group_NAME
       - name: PRODUCT_KEY
       table:
         table_columns:
@@ -31,9 +31,9 @@ liveboard:
       chart:
         type: SCATTER
         chart_columns:
+        - column_id: Product Group_NAME
         - column_id: PRODUCT_KEY
         - column_id: Product Group_KEY
-        - column_id: Product Group_NAME
         axis_configs:
         - x:
           - Product Group_NAME
@@ -42,36 +42,9 @@ liveboard:
           category:
           - Product Group_KEY
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"PRODUCT_KEY\",\"columnProperty\": {}},{\"columnId\": \"Product Group_KEY\",\"columnProperty\": {}},{\"columnId\": \"Product Group_NAME\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"27a3065c-2355-4219-aad2-60414a36b711\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"PRODUCT_KEY\"],\"isOpposite\": false}},{\"id\": \"3160b150-cb02-4a24-a759-8a99df0caf32\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Group_NAME\"]}}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Product Group_NAME\",\"columnProperty\": {}},{\"columnId\": \"PRODUCT_KEY\",\"columnProperty\": {}},{\"columnId\": \"Product Group_KEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"73cbd977-513e-4bb2-bb25-b7ff9a6759b9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"PRODUCT_KEY\"],\"isOpposite\": false}},{\"id\": \"f5837fbe-6808-41d7-ad1c-89864a2c735e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Group_NAME\"]}}]}"
       display_mode: TABLE_MODE
     viz_guid: 0cafcf15-4687-4cce-ae8e-18f41239edfa
-  - id: Viz_2
-    answer:
-      name: Brand1
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Brand1]"
-      answer_columns:
-      - name: Brand1
-      table:
-        table_columns:
-        - column_id: Brand1
-          headline_aggregation: COUNT_DISTINCT
-        ordered_column_ids:
-        - Brand1
-        client_state: ""
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Brand1
-        axis_configs:
-        - "y":
-          - Brand1
-        client_state: ""
-      display_mode: TABLE_MODE
-    viz_guid: 030dbbc9-140f-49e1-8f8d-7585d296fcc9
   layout:
     tiles:
     - visualization_id: Viz_1
