@@ -1,0 +1,45 @@
+guid: 3f54f316-0a6b-4034-abe6-2ef60aea7778
+liveboard:
+  name: Pink
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Product Group_KEY, Product Group_NAME, PRODUCT_KEY"
+      tables:
+      - id: PRODUCT
+        name: PRODUCT
+        fqn: 7c9d6e4d-cee4-4d03-a062-62e26804ac02
+      search_query: "[Product Group_KEY] [Product Group_NAME] [PRODUCT_KEY]"
+      answer_columns:
+      - name: Product Group_KEY
+      - name: Product Group_NAME
+      - name: PRODUCT_KEY
+      table:
+        table_columns:
+        - column_id: Product Group_KEY
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Product Group_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: PRODUCT_KEY
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Product Group_KEY
+        - Product Group_NAME
+        - PRODUCT_KEY
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Product Group_KEY
+        - column_id: Product Group_NAME
+        - column_id: PRODUCT_KEY
+        axis_configs:
+        - x:
+          - Product Group_NAME
+          "y":
+          - PRODUCT_KEY
+          category:
+          - Product Group_KEY
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 0cafcf15-4687-4cce-ae8e-18f41239edfa
