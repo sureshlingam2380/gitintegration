@@ -11,9 +11,9 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Supply Cost] [Category] [Color]"
       answer_columns:
-      - name: Total Supply Cost
       - name: Category
       - name: Color
+      - name: Total Supply Cost
       table:
         table_columns:
         - column_id: Category
@@ -31,8 +31,8 @@ liveboard:
       chart:
         type: HEATMAP
         chart_columns:
-        - column_id: Category
         - column_id: Color
+        - column_id: Category
         - column_id: Total Supply Cost
         axis_configs:
         - x:
@@ -44,46 +44,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1be62b49-d0c4-45a6-8928-aba5c67cc821\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Color\"],\"isOpposite\": false}},{\"id\": \"081ae481-5f68-4260-b507-05fedbf37ab5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#11\",\"color\": \"#47515F\"},{\"serieName\": \"mfgr#12\",\"color\": \"#BEC6D0\"},{\"serieName\": \"mfgr#13\",\"color\": \"#747E8C\"},{\"serieName\": \"mfgr#14\",\"color\": \"#C26232\"},{\"serieName\": \"mfgr#15\",\"color\": \"#FFCCB3\"},{\"serieName\": \"mfgr#21\",\"color\": \"#FF8142\"},{\"serieName\": \"mfgr#22\",\"color\": \"#6A4ABA\"},{\"serieName\": \"mfgr#23\",\"color\": \"#D1C0FB\"},{\"serieName\": \"mfgr#24\",\"color\": \"#8C62F5\"},{\"serieName\": \"mfgr#25\",\"color\": \"#56D3A8\"},{\"serieName\": \"mfgr#31\",\"color\": \"#049160\"},{\"serieName\": \"mfgr#32\",\"color\": \"#9BE5CB\"},{\"serieName\": \"mfgr#33\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#34\",\"color\": \"#FCD977\"},{\"serieName\": \"mfgr#35\",\"color\": \"#BF982A\"},{\"serieName\": \"mfgr#41\",\"color\": \"#FDE9AF\"},{\"serieName\": \"mfgr#42\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#43\",\"color\": \"#82DFE9\"},{\"serieName\": \"mfgr#44\",\"color\": \"#369FAA\"},{\"serieName\": \"mfgr#45\",\"color\": \"#B5ECF2\"},{\"serieName\": \"mfgr#51\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#52\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#53\",\"color\": \"#2359B6\"},{\"serieName\": \"mfgr#54\",\"color\": \"#ABC7F9\"},{\"serieName\": \"mfgr#55\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Supply Cost\",\"color\": \"#FCC838\"},{\"serieName\": \"pareto\",\"color\": \"#FCC838\"},{\"serieName\": \"Color\",\"color\": \"#48d1e0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 14bff714-2881-493c-9584-98070f107ce6
-  - id: Viz_2
-    answer:
-      name: Total Revenue by Month Commit Date and Month Order Date
-      tables:
-      - id: Container Worksheet
-        name: Container Worksheet
-        fqn: 286933b5-fc30-46b8-9216-31f669f46a15
-      search_query: "[Revenue] [Month Order Date] [Month Commit Date]"
-      answer_columns:
-      - name: Total Revenue
-      - name: Month Order Date
-      - name: Month Commit Date
-      table:
-        table_columns:
-        - column_id: Month Order Date
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Month Commit Date
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Revenue
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Month Order Date
-        - Month Commit Date
-        - Total Revenue
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: STACKED_COLUMN
-        chart_columns:
-        - column_id: Month Order Date
-        - column_id: Month Commit Date
-        - column_id: Total Revenue
-        axis_configs:
-        - x:
-          - Month Commit Date
-          "y":
-          - Total Revenue
-          color:
-          - Month Order Date
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month Order Date\",\"columnProperty\": {}},{\"columnId\": \"Month Commit Date\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d45c4b6d-6ee0-4d35-8e13-0ee4edd140db\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d889c9ea-f952-4c79-95df-0ad78103998c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month Commit Date\"]}}],\"systemSeriesColors\": [{\"serieName\": \"april\",\"color\": \"#B094F8\"},{\"serieName\": \"augest\",\"color\": \"#8C62F5\"},{\"serieName\": \"december\",\"color\": \"#56D3A8\"},{\"serieName\": \"february\",\"color\": \"#06BF7F\"},{\"serieName\": \"january\",\"color\": \"#FCD977\"},{\"serieName\": \"july\",\"color\": \"#FCC838\"},{\"serieName\": \"june\",\"color\": \"#369FAA\"},{\"serieName\": \"march\",\"color\": \"#82DFE9\"},{\"serieName\": \"may\",\"color\": \"#48D1E0\"},{\"serieName\": \"november\",\"color\": \"#2359B6\"},{\"serieName\": \"octorber\",\"color\": \"#71A1F4\"},{\"serieName\": \"september\",\"color\": \"#2E75F0\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: 14881d1c-7fad-46c9-81fb-1e342457c651
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
