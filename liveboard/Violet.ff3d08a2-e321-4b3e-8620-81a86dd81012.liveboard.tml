@@ -11,8 +11,8 @@ liveboard:
         fqn: 286933b5-fc30-46b8-9216-31f669f46a15
       search_query: "[Extended Price] [Revenue] [Supplier Nation]"
       answer_columns:
-      - name: Total Extended Price
       - name: Total Revenue
+      - name: Total Extended Price
       - name: Supplier Nation
       table:
         table_columns:
@@ -31,9 +31,9 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Supplier Nation
-        - column_id: Total Extended Price
         - column_id: Total Revenue
+        - column_id: Total Extended Price
+        - column_id: Supplier Nation
         axis_configs:
         - x:
           - Supplier Nation
@@ -44,46 +44,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Supplier Nation\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"718108fd-e449-4f24-9df8-fbcbdcbeb873\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"7490cefd-680d-47c4-91e8-d06df488d16a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": true}},{\"id\": \"ebdb6790-5827-41b6-a47f-dc971584bfeb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Supplier Nation\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 233acba9-67f8-4fd2-9f44-f418eded6662
-  - id: Viz_2
-    answer:
-      name: Total Discount by Quarterly Order Date and Ship Priority
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Discount] [Order Date] [Order Date].quarterly [Ship Priority]"
-      answer_columns:
-      - name: Total Discount
-      - name: Quarter(Order Date)
-      - name: Ship Priority
-      table:
-        table_columns:
-        - column_id: Quarter(Order Date)
-          headline_aggregation: MIN-MAX
-        - column_id: Ship Priority
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Discount
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Quarter(Order Date)
-        - Ship Priority
-        - Total Discount
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: LINE
-        chart_columns:
-        - column_id: Quarter(Order Date)
-        - column_id: Ship Priority
-        - column_id: Total Discount
-        axis_configs:
-        - x:
-          - Quarter(Order Date)
-          "y":
-          - Total Discount
-          color:
-          - Ship Priority
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Ship Priority\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e5942adc-6b8d-4945-938c-d7d44fcffec3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"d355a28b-5d22-48ef-a525-a42b9c533f23\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"0\",\"color\": \"#06BF7F\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: 8ebf0208-c481-4c5b-bd48-bc002a174958
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
