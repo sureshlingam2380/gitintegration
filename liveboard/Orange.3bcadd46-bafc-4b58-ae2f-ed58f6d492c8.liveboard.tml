@@ -11,8 +11,8 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Type] [Discount]"
       answer_columns:
-      - name: Type
       - name: Total Discount
+      - name: Type
       table:
         table_columns:
         - column_id: Type
@@ -38,39 +38,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"373d802a-d81f-41d3-84b4-db38853e0638\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"5729cd1b-e6c8-40eb-816e-eebf49dcf980\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 46400596-a8ab-40cf-9a49-d8b86cb571e3
-  - id: Viz_2
-    answer:
-      name: Total Supply Cost by Lineorder Partkey
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Lineorder Partkey] [Supply Cost]"
-      answer_columns:
-      - name: Lineorder Partkey
-      - name: Total Supply Cost
-      table:
-        table_columns:
-        - column_id: Lineorder Partkey
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Supply Cost
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Lineorder Partkey
-        - Total Supply Cost
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: Lineorder Partkey
-        - column_id: Total Supply Cost
-        axis_configs:
-        - x:
-          - Lineorder Partkey
-          "y":
-          - Total Supply Cost
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Lineorder Partkey\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"469bf666-4c7a-49fd-a527-88dc609b3d9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"11de55d8-16b6-4fc8-b6b3-13cc43e20e65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Lineorder Partkey\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Supply Cost\",\"color\": \"#06BF7F\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: c9167f30-afdc-45da-aee5-a6814acd567b
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
