@@ -19,6 +19,7 @@ liveboard:
         ordered_column_ids:
         - PRODUCT_ATTRIBUTE
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"PRODUCT_ATTRIBUTE\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -27,32 +28,10 @@ liveboard:
         - "y":
           - PRODUCT_ATTRIBUTE
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"PRODUCT_ATTRIBUTE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"72392bb2-4b47-4f4a-aa12-87c49e831072\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"PRODUCT_ATTRIBUTE\"],\"isOpposite\": false}},{\"id\": \"2596e17a-f5f1-492f-aeb6-078ed9859151\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: TABLE_MODE
     viz_guid: ff850983-7fe8-435e-93ac-f9680f5b8b61
-  - id: Viz_2
-    answer:
-      name: Customer City
-      tables:
-      - id: Generic-NonGeneric WS
-        name: Generic-NonGeneric WS
-        fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
-      search_query: "[Customer City]"
-      answer_columns:
-      - name: Customer City
-      table:
-        table_columns:
-        - column_id: Customer City
-          headline_aggregation: COUNT_DISTINCT
-        ordered_column_ids:
-        - Customer City
-        client_state: ""
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Customer City
-        axis_configs:
-        - "y":
-          - Customer City
-        client_state: ""
-      display_mode: TABLE_MODE
-    viz_guid: 91ea2cce-4bb4-4d38-aafa-16bd6fbe3d00
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: LARGE
