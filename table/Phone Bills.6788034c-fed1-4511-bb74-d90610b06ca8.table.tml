@@ -1,0 +1,33 @@
+guid: 6788034c-fed1-4511-bb74-d90610b06ca8
+table:
+  name: Phone Bills
+  db: TPCH5K
+  schema: falcon_default_schema
+  db_table: Phone Bills
+  columns:
+  - name: Phone Id
+    db_column_name: Phone Id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Phone Bill Id
+    db_column_name: Phone Bill Id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Bill Cost
+    db_column_name: Bill Cost
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64
+  joins_with:
+  - name: Phone Id - Phone Id
+    destination:
+      name: Phone Dimension
+      fqn: 893b566a-61fb-4abe-87ea-763bfb92834e
+    "on": "[Phone Bills::Phone Id] = [Phone Dimension::Phone Id]"
+    type: INNER

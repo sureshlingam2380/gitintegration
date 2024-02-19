@@ -1,0 +1,57 @@
+guid: 0aaebced-14fb-47d8-acb4-2442c445772a
+liveboard:
+  name: Green
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "avgsalecost, Total Bill Cost, Total Clicks by Monthly Contact Start Date"
+      tables:
+      - id: Phone Chasmtrap
+        name: Phone Chasmtrap
+        fqn: d61d3b15-a774-4830-a372-0ac1f9769531
+      search_query: "[avgsalecost] [Bill Cost] [Clicks] [sales Phone Id] [Contact Start Date] [Contact Start Date].monthly"
+      answer_columns:
+      - name: avgsalecost
+      - name: Total Bill Cost
+      - name: Total Clicks
+      - name: sales Phone Id
+      - name: Month(Contact Start Date)
+      table:
+        table_columns:
+        - column_id: sales Phone Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Contact Start Date)
+          headline_aggregation: MIN-MAX
+        - column_id: avgsalecost
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Bill Cost
+          headline_aggregation: SUM
+        - column_id: Total Clicks
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - sales Phone Id
+        - Month(Contact Start Date)
+        - avgsalecost
+        - Total Bill Cost
+        - Total Clicks
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: sales Phone Id
+        - column_id: Month(Contact Start Date)
+        - column_id: avgsalecost
+        - column_id: Total Bill Cost
+        - column_id: Total Clicks
+        axis_configs:
+        - x:
+          - Month(Contact Start Date)
+          "y":
+          - avgsalecost
+          - Total Bill Cost
+          - Total Clicks
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"sales Phone Id\",\"columnProperty\": {}},{\"columnId\": \"Month(Contact Start Date)\",\"columnProperty\": {}},{\"columnId\": \"avgsalecost\",\"columnProperty\": {}},{\"columnId\": \"Total Bill Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Clicks\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9f43c881-283e-4950-a8ca-bc1ca17b948e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"avgsalecost\"],\"isOpposite\": false}},{\"id\": \"e789c4b0-61da-46a2-ae1d-f5cb2ef1eb33\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Bill Cost\"],\"isOpposite\": true}},{\"id\": \"788f1475-a648-414f-940d-b1c95188928f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Clicks\"],\"isOpposite\": true}},{\"id\": \"b7f63585-7e1b-45e1-9a05-999216369c99\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Contact Start Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Bill Cost\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Clicks\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d1019f6d-e7c3-4c92-a567-9f174384358a

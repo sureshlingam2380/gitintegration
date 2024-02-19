@@ -1,0 +1,63 @@
+guid: ef8a4852-e67a-4b4e-a39c-9be790366eff
+table:
+  name: Phone Contacts
+  db: TPCH5K
+  schema: falcon_default_schema
+  db_table: Phone Contacts
+  columns:
+  - name: Contact Id
+    db_column_name: Contact Id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Phone Id
+    db_column_name: Phone Id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Clicks
+    db_column_name: Clicks
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64
+  - name: Contact Start Date
+    db_column_name: Contact Start Date
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: DATE
+  - name: Contact End Date
+    db_column_name: Contact End Date
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: DATE
+  - name: Campaign Type
+    db_column_name: Category
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: Contact End Date - Date Key
+    destination:
+      name: Phone Dates
+      fqn: b5643f1f-0fe4-4b0c-b8bc-87473d12c6c6
+    "on": "[Phone Contacts::Contact End Date] = [Phone Dates::Date Key]"
+    type: INNER
+  - name: Contact Start Date - Date Key
+    destination:
+      name: Phone Dates
+      fqn: b5643f1f-0fe4-4b0c-b8bc-87473d12c6c6
+    "on": "[Phone Contacts::Contact Start Date] = [Phone Dates::Date Key]"
+    type: INNER
+  - name: Phone Id - Phone Id
+    destination:
+      name: Phone Dimension
+      fqn: 893b566a-61fb-4abe-87ea-763bfb92834e
+    "on": "[Phone Contacts::Phone Id] = [Phone Dimension::Phone Id]"
+    type: INNER
