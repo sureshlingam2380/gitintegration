@@ -1,0 +1,31 @@
+guid: 76015322-268b-4db7-ac3e-4d6ee6eff213
+liveboard:
+  name: Green
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: PRODUCT_ATTRIBUTE
+      tables:
+      - id: rls_products_general
+        name: rls_products_general
+        fqn: 5a2c4992-2259-4738-9c08-0faace3a4037
+      search_query: "[PRODUCT_ATTRIBUTE]"
+      answer_columns:
+      - name: PRODUCT_ATTRIBUTE
+      table:
+        table_columns:
+        - column_id: PRODUCT_ATTRIBUTE
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - PRODUCT_ATTRIBUTE
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: PRODUCT_ATTRIBUTE
+        axis_configs:
+        - "y":
+          - PRODUCT_ATTRIBUTE
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: ff850983-7fe8-435e-93ac-f9680f5b8b61

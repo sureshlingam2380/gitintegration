@@ -1,0 +1,33 @@
+guid: 5a2c4992-2259-4738-9c08-0faace3a4037
+table:
+  name: rls_products_general
+  db: rls_test
+  schema: falcon_default_schema
+  db_table: rls_products_general
+  columns:
+  - name: PRODUCT_ID
+    db_column_name: PRODUCT_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: PRODUCT_NAME
+    db_column_name: PRODUCT_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PRODUCT_ATTRIBUTE
+    db_column_name: PRODUCT_ATTRIBUTE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: PRODUCT_ID - PRODUCT_DETAIL_ID
+    destination:
+      name: rls_products_detail_general
+      fqn: ae4e4b7d-5760-4ced-a4e3-b2c99cb50cf1
+    "on": "[rls_products_general::PRODUCT_ID] = [rls_products_detail_general::PRODUCT_DETAIL_ID]"
+    type: INNER
