@@ -11,9 +11,9 @@ liveboard:
         fqn: b7b6aa0d-9c04-40cf-8916-3329b559a402
       search_query: "[Commit Date] [Commit Date].monthly [Revenue] [Lineorder PartKey]"
       answer_columns:
-      - name: Lineorder PartKey
       - name: Total Revenue
       - name: Month(Commit Date)
+      - name: Lineorder PartKey
       table:
         table_columns:
         - column_id: Month(Commit Date)
@@ -31,8 +31,8 @@ liveboard:
       chart:
         type: LINE
         chart_columns:
-        - column_id: Month(Commit Date)
         - column_id: Lineorder PartKey
+        - column_id: Month(Commit Date)
         - column_id: Total Revenue
         axis_configs:
         - x:
@@ -52,8 +52,8 @@ liveboard:
         fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
       search_query: "[Product Id] [Sale Cost]"
       answer_columns:
-      - name: Product Id
       - name: Total Sale Cost
+      - name: Product Id
       table:
         table_columns:
         - column_id: Product Id
@@ -68,8 +68,8 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Product Id
         - column_id: Total Sale Cost
+        - column_id: Product Id
         axis_configs:
         - x:
           - Product Id
@@ -88,9 +88,9 @@ liveboard:
         fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
       search_query: "[Part PartKey] [Industry] [Customer Region]"
       answer_columns:
-      - name: Total Part PartKey
       - name: Industry
       - name: Customer Region
+      - name: Total Part PartKey
       table:
         table_columns:
         - column_id: Industry
@@ -108,9 +108,9 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Industry
-        - column_id: Total Part PartKey
         - column_id: Customer Region
+        - column_id: Total Part PartKey
+        - column_id: Industry
         axis_configs:
         - x:
           - Customer Region
@@ -131,9 +131,9 @@ liveboard:
         fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
       search_query: "[Part PartKey] [Industry] [Customer Region]"
       answer_columns:
+      - name: Customer Region
       - name: Total Part PartKey
       - name: Industry
-      - name: Customer Region
       table:
         table_columns:
         - column_id: Industry
@@ -152,8 +152,8 @@ liveboard:
         type: COLUMN
         chart_columns:
         - column_id: Total Part PartKey
-        - column_id: Industry
         - column_id: Customer Region
+        - column_id: Industry
         axis_configs:
         - x:
           - Customer Region
@@ -194,9 +194,9 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Promotion_State
         - column_id: Total Agency Review_Rating
         - column_id: Promotion_Type
+        - column_id: Promotion_State
         axis_configs:
         - x:
           - Promotion_State
