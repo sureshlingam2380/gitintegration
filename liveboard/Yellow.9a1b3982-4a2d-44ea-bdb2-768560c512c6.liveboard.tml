@@ -11,9 +11,9 @@ liveboard:
         fqn: b7b6aa0d-9c04-40cf-8916-3329b559a402
       search_query: "[Commit Date] [Commit Date].monthly [Revenue] [Lineorder PartKey]"
       answer_columns:
-      - name: Total Revenue
-      - name: Lineorder PartKey
       - name: Month(Commit Date)
+      - name: Lineorder PartKey
+      - name: Total Revenue
       table:
         table_columns:
         - column_id: Month(Commit Date)
@@ -32,8 +32,8 @@ liveboard:
         type: LINE
         chart_columns:
         - column_id: Month(Commit Date)
-        - column_id: Total Revenue
         - column_id: Lineorder PartKey
+        - column_id: Total Revenue
         axis_configs:
         - x:
           - Month(Commit Date)
@@ -52,8 +52,8 @@ liveboard:
         fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
       search_query: "[Product Id] [Sale Cost]"
       answer_columns:
-      - name: Total Sale Cost
       - name: Product Id
+      - name: Total Sale Cost
       table:
         table_columns:
         - column_id: Product Id
@@ -122,6 +122,92 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Industry\",\"columnProperty\": {}},{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Total Part PartKey\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d830d951-230c-48f1-a9e0-eee016ec1d01\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Part PartKey\"],\"isOpposite\": false}},{\"id\": \"19afb77b-2b83-4321-857a-b12612139628\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Customer Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"automobile\",\"color\": \"#FCC838\"},{\"serieName\": \"electronics\",\"color\": \"#48D1E0\"},{\"serieName\": \"finance\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 4c62ceaa-9dd2-4042-acb2-f6f0c554d365
+  - id: Viz_4
+    answer:
+      name: Total Part PartKey by Customer Region and Industry
+      tables:
+      - id: Generic-NonGeneric WS
+        name: Generic-NonGeneric WS
+        fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
+      search_query: "[Part PartKey] [Industry] [Customer Region]"
+      answer_columns:
+      - name: Customer Region
+      - name: Total Part PartKey
+      - name: Industry
+      table:
+        table_columns:
+        - column_id: Industry
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Part PartKey
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Industry
+        - Customer Region
+        - Total Part PartKey
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Industry
+        - column_id: Total Part PartKey
+        - column_id: Customer Region
+        axis_configs:
+        - x:
+          - Customer Region
+          "y":
+          - Total Part PartKey
+          color:
+          - Industry
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Industry\",\"columnProperty\": {}},{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Total Part PartKey\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d830d951-230c-48f1-a9e0-eee016ec1d01\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Part PartKey\"],\"isOpposite\": false}},{\"id\": \"19afb77b-2b83-4321-857a-b12612139628\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Customer Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"automobile\",\"color\": \"#FCC838\"},{\"serieName\": \"electronics\",\"color\": \"#48D1E0\"},{\"serieName\": \"finance\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 64eb1b3f-6076-4b8d-ab88-c2c23d5f8c81
+  - id: Viz_5
+    answer:
+      name: Total Agency Review_Rating by Promotion_State and Promotion_Type
+      tables:
+      - id: Complex_Schema_Full_Outer_Join
+        name: Complex_Schema_Full_Outer_Join
+        fqn: e4c2d89d-f8fe-4e51-90b5-c6b8358bd6ea
+      search_query: "[Agency Review_Rating] [Promotion_Type] [Promotion_State]"
+      answer_columns:
+      - name: Promotion_State
+      - name: Promotion_Type
+      - name: Total Agency Review_Rating
+      table:
+        table_columns:
+        - column_id: Promotion_Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Promotion_State
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Agency Review_Rating
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Promotion_Type
+        - Promotion_State
+        - Total Agency Review_Rating
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total Agency Review_Rating
+        - column_id: Promotion_Type
+        - column_id: Promotion_State
+        axis_configs:
+        - x:
+          - Promotion_State
+          "y":
+          - Total Agency Review_Rating
+          color:
+          - Promotion_Type
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Promotion_Type\",\"columnProperty\": {}},{\"columnId\": \"Promotion_State\",\"columnProperty\": {}},{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"575966a4-0e4f-457c-b4e7-09323c1398b3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"aba8c0cd-40bc-419e-99ce-cc17db5bc122\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Promotion_State\"]}}],\"systemSeriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"bi event\",\"color\": \"#FCC838\"},{\"serieName\": \"career fair\",\"color\": \"#82DFE9\"},{\"serieName\": \"conference\",\"color\": \"#48D1E0\"},{\"serieName\": \"roadshow\",\"color\": \"#71A1F4\"},{\"serieName\": \"sales event\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: ae9aedfc-201c-4b7d-8172-9ff766089b36
   layout:
     tiles:
     - visualization_id: Viz_1
@@ -129,4 +215,8 @@ liveboard:
     - visualization_id: Viz_2
       size: MEDIUM
     - visualization_id: Viz_3
+      size: MEDIUM
+    - visualization_id: Viz_4
+      size: MEDIUM
+    - visualization_id: Viz_5
       size: MEDIUM
