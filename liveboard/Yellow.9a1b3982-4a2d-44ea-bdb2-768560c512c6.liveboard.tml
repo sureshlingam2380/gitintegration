@@ -79,3 +79,46 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5b2e1ae8-aed1-444e-93ae-3da8bc9acb0c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"4f4735df-02a2-4722-b85d-b88a2cc39d9e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sale Cost\",\"color\": \"#FF8142\"}]}"
       display_mode: CHART_MODE
     viz_guid: 0760e74e-8462-47e8-83e7-9b3a72c4f660
+  - id: Viz_3
+    answer:
+      name: Total Part PartKey by Customer Region and Industry
+      tables:
+      - id: Generic-NonGeneric WS
+        name: Generic-NonGeneric WS
+        fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
+      search_query: "[Part PartKey] [Industry] [Customer Region]"
+      answer_columns:
+      - name: Total Part PartKey
+      - name: Industry
+      - name: Customer Region
+      table:
+        table_columns:
+        - column_id: Industry
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Part PartKey
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Industry
+        - Customer Region
+        - Total Part PartKey
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Industry
+        - column_id: Customer Region
+        - column_id: Total Part PartKey
+        axis_configs:
+        - x:
+          - Customer Region
+          "y":
+          - Total Part PartKey
+          color:
+          - Industry
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Industry\",\"columnProperty\": {}},{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Total Part PartKey\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d830d951-230c-48f1-a9e0-eee016ec1d01\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Part PartKey\"],\"isOpposite\": false}},{\"id\": \"19afb77b-2b83-4321-857a-b12612139628\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Customer Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"automobile\",\"color\": \"#FCC838\"},{\"serieName\": \"electronics\",\"color\": \"#48D1E0\"},{\"serieName\": \"finance\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4c62ceaa-9dd2-4042-acb2-f6f0c554d365
