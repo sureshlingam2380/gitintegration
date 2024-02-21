@@ -1,0 +1,81 @@
+guid: 9a1b3982-4a2d-44ea-bdb2-768560c512c6
+liveboard:
+  name: Yellow
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Revenue by Monthly Commit Date
+      tables:
+      - id: Lineorder Part - Inner
+        name: Lineorder Part - Inner
+        fqn: b7b6aa0d-9c04-40cf-8916-3329b559a402
+      search_query: "[Commit Date] [Commit Date].monthly [Revenue] [Lineorder PartKey]"
+      answer_columns:
+      - name: Month(Commit Date)
+      - name: Total Revenue
+      - name: Lineorder PartKey
+      table:
+        table_columns:
+        - column_id: Month(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Lineorder PartKey
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Commit Date)
+        - Lineorder PartKey
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Commit Date)
+        - column_id: Lineorder PartKey
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Month(Commit Date)
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Lineorder PartKey\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"41a00ab9-f391-4ec1-88bd-9905b6462c55\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"6a767e52-9a2b-4cae-bd4d-0d00aa1685fe\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: c63a3235-66ce-4ccb-9f2f-314b4049e43e
+  - id: Viz_2
+    answer:
+      name: Total Sale Cost by Product Id
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[Product Id] [Sale Cost]"
+      answer_columns:
+      - name: Product Id
+      - name: Total Sale Cost
+      table:
+        table_columns:
+        - column_id: Product Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sale Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Product Id
+        - Total Sale Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Id
+        - column_id: Total Sale Cost
+        axis_configs:
+        - x:
+          - Product Id
+          "y":
+          - Total Sale Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5b2e1ae8-aed1-444e-93ae-3da8bc9acb0c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"4f4735df-02a2-4722-b85d-b88a2cc39d9e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sale Cost\",\"color\": \"#FF8142\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 0760e74e-8462-47e8-83e7-9b3a72c4f660
