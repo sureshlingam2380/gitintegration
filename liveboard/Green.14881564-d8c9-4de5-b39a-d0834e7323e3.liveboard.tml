@@ -85,3 +85,45 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Agency Review_Rating ID\",\"columnProperty\": {}},{\"columnId\": \"Total Employee_Age\",\"columnProperty\": {}},{\"columnId\": \"Total Customer_Zip\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"66d01482-b2bd-4169-931a-3e4dda071165\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Employee_Age\"],\"isOpposite\": false}},{\"id\": \"c3f3a2de-1bc2-48da-9a54-e715676ebb50\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Customer_Zip\"],\"isOpposite\": true}},{\"id\": \"c8f60ba2-cbea-4fa8-a3f7-0bf127a3b2a3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Agency Review_Rating ID\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Employee_Age\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Customer_Zip\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: e5355924-5483-4834-b321-410c61949075
+  - id: Viz_3
+    answer:
+      name: Total Revenue by Username
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Revenue] [Username]"
+      answer_columns:
+      - name: Total Revenue
+      - name: Username
+      table:
+        table_columns:
+        - column_id: Username
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Username
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Username
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Username
+          "y":
+          - Total Revenue
+        - "y":
+          - Total Revenue
+        - x:
+          - Username
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Username\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"64814ea3-34d0-4ba3-b615-61b461daff60\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"1217bbcf-1126-4792-889a-8cf1fc4512c9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Username\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: c9bf45e8-29c3-4675-9079-08961b908891
