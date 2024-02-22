@@ -44,3 +44,46 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}},{\"columnId\": \"Total Org Masked Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"15f203f2-f6ff-443c-a10d-ebc78430e99a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"ec2cc8dc-e0ae-4615-a852-84c1387f9ad4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Org Masked Revenue\"],\"isOpposite\": true}},{\"id\": \"fe1ef8fc-f50a-4767-9789-67af8b64871e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Order Total Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Org Masked Revenue\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 612fa130-e937-45d4-a874-08e14898f77f
+  - id: Viz_2
+    answer:
+      name: Total Tax by Total Supply Cost
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Part Name] [Supply Cost] [Tax]"
+      answer_columns:
+      - name: Part Name
+      - name: Total Supply Cost
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Part Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Part Name
+        - Total Supply Cost
+        - Total Tax
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Part Name
+        - column_id: Total Supply Cost
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Total Supply Cost
+          "y":
+          - Total Tax
+          category:
+          - Part Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Name\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"035be0c3-739a-43bc-97c3-becd0eed9cd7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"a92ff0ec-e257-4432-b4ea-0d4846f77b0d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Supply Cost\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f0b50fed-ac10-4cec-8d8f-27febedfead1
