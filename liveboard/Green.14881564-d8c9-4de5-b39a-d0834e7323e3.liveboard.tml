@@ -117,6 +117,38 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 205caf6f-f6c6-4683-b284-1a31a19e13e7
+  - id: Viz_4
+    answer:
+      name: Total Org Masked Revenue
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Org Masked Revenue] [Quantity]"
+      answer_columns:
+      - name: Total Org Masked Revenue
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Total Org Masked Revenue
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Org Masked Revenue
+        - Total Quantity
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Org Masked Revenue
+        - column_id: Total Quantity
+        axis_configs:
+        - "y":
+          - Total Org Masked Revenue
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: e13da074-6877-4aea-ad5f-858366e9fb26
   layout:
     tiles:
     - visualization_id: Viz_1
