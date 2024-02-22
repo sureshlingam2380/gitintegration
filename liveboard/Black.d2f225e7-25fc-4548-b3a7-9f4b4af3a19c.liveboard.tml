@@ -173,3 +173,46 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Name\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"035be0c3-739a-43bc-97c3-becd0eed9cd7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"a92ff0ec-e257-4432-b4ea-0d4846f77b0d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Supply Cost\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 97f1ffd7-a91e-48e3-8738-13915d1f2bf7
+  - id: Viz_5
+    answer:
+      name: Total Tax by Total Supply Cost
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Part Name] [Supply Cost] [Tax]"
+      answer_columns:
+      - name: Part Name
+      - name: Total Supply Cost
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Part Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Part Name
+        - Total Supply Cost
+        - Total Tax
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Part Name
+        - column_id: Total Supply Cost
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Total Supply Cost
+          "y":
+          - Total Tax
+          category:
+          - Part Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Name\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"035be0c3-739a-43bc-97c3-becd0eed9cd7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"a92ff0ec-e257-4432-b4ea-0d4846f77b0d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Supply Cost\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 69ea01be-a32c-43f4-b690-c96b2e0f781f
