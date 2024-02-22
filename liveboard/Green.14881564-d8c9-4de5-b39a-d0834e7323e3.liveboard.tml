@@ -85,6 +85,38 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Agency Review_Rating ID\",\"columnProperty\": {}},{\"columnId\": \"Total Employee_Age\",\"columnProperty\": {}},{\"columnId\": \"Total Customer_Zip\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"66d01482-b2bd-4169-931a-3e4dda071165\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Employee_Age\"],\"isOpposite\": false}},{\"id\": \"c3f3a2de-1bc2-48da-9a54-e715676ebb50\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Customer_Zip\"],\"isOpposite\": true}},{\"id\": \"c8f60ba2-cbea-4fa8-a3f7-0bf127a3b2a3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Agency Review_Rating ID\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Employee_Age\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Customer_Zip\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: e5355924-5483-4834-b321-410c61949075
+  - id: Viz_3
+    answer:
+      name: Total Org Masked Revenue
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Org Masked Revenue] [Quantity]"
+      answer_columns:
+      - name: Total Org Masked Revenue
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Total Org Masked Revenue
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Org Masked Revenue
+        - Total Quantity
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Org Masked Revenue
+        - column_id: Total Quantity
+        axis_configs:
+        - "y":
+          - Total Org Masked Revenue
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 205caf6f-f6c6-4683-b284-1a31a19e13e7
   layout:
     tiles:
     - visualization_id: Viz_1
