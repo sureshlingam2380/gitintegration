@@ -43,3 +43,45 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"18ce8f16-dbeb-4f9d-9330-ebd6130c2ae0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"36603b63-d36b-47ef-abd0-787db76192c8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: cd29531a-408f-4714-94ac-79664ff97b42
+  - id: Viz_2
+    answer:
+      name: "Total Employee_Age, Total Customer_Zip by Agency Review_Rating ID"
+      tables:
+      - id: Complex_Schema_Left_Outer_Join
+        name: Complex_Schema_Left_Outer_Join
+        fqn: 06521b6d-c035-451d-89bc-e0b0b20d5086
+      search_query: "[Employee_Age] [Customer_Zip] [Agency Review_Rating ID]"
+      answer_columns:
+      - name: Total Employee_Age
+      - name: Total Customer_Zip
+      - name: Agency Review_Rating ID
+      table:
+        table_columns:
+        - column_id: Agency Review_Rating ID
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Employee_Age
+          headline_aggregation: SUM
+        - column_id: Total Customer_Zip
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Agency Review_Rating ID
+        - Total Employee_Age
+        - Total Customer_Zip
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Agency Review_Rating ID
+        - column_id: Total Employee_Age
+        - column_id: Total Customer_Zip
+        axis_configs:
+        - x:
+          - Agency Review_Rating ID
+          "y":
+          - Total Employee_Age
+          - Total Customer_Zip
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Agency Review_Rating ID\",\"columnProperty\": {}},{\"columnId\": \"Total Employee_Age\",\"columnProperty\": {}},{\"columnId\": \"Total Customer_Zip\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"66d01482-b2bd-4169-931a-3e4dda071165\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Employee_Age\"],\"isOpposite\": false}},{\"id\": \"c3f3a2de-1bc2-48da-9a54-e715676ebb50\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Customer_Zip\"],\"isOpposite\": true}},{\"id\": \"c8f60ba2-cbea-4fa8-a3f7-0bf127a3b2a3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Agency Review_Rating ID\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Employee_Age\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Customer_Zip\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: e5355924-5483-4834-b321-410c61949075
