@@ -1,0 +1,40 @@
+guid: 88c6cac0-2b1d-4009-909e-bcc89530267b
+liveboard:
+  name: Violet
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Tax by Brand1
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Brand1] [Tax]"
+      answer_columns:
+      - name: Brand1
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Brand1
+        - Total Tax
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Brand1
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Brand1
+          "y":
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7f4fdf29-0fe9-490e-9ef8-dbcdd8d099f2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"59dc5034-a9d9-440a-8073-d3e637b3772b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8f4f509b-99d5-47c0-8b92-af897fad100f
