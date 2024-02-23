@@ -12,8 +12,8 @@ liveboard:
       search_query: "[Discount] [Brand1] [Order Date] [Order Date].monthly"
       answer_columns:
       - name: Month(Order Date)
-      - name: Brand1
       - name: Total Discount
+      - name: Brand1
       table:
         table_columns:
         - column_id: Brand1
@@ -31,8 +31,8 @@ liveboard:
       chart:
         type: LINE
         chart_columns:
-        - column_id: Brand1
         - column_id: Total Discount
+        - column_id: Brand1
         - column_id: Month(Order Date)
         axis_configs:
         - x:
@@ -52,9 +52,9 @@ liveboard:
         fqn: 06521b6d-c035-451d-89bc-e0b0b20d5086
       search_query: "[Employee_Age] [Customer_Zip] [Agency Review_Rating ID]"
       answer_columns:
+      - name: Total Customer_Zip
       - name: Agency Review_Rating ID
       - name: Total Employee_Age
-      - name: Total Customer_Zip
       table:
         table_columns:
         - column_id: Agency Review_Rating ID
@@ -72,9 +72,9 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Total Customer_Zip
         - column_id: Total Employee_Age
         - column_id: Agency Review_Rating ID
+        - column_id: Total Customer_Zip
         axis_configs:
         - x:
           - Agency Review_Rating ID
@@ -106,6 +106,7 @@ liveboard:
         - Total Org Masked Revenue
         - Total Quantity
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Org Masked Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -115,43 +116,14 @@ liveboard:
         - "y":
           - Total Org Masked Revenue
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Org Masked Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f7f73000-4fe7-49a6-aca7-5cff74dc883a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Org Masked Revenue\"],\"isOpposite\": false}},{\"id\": \"143b4431-2201-4b04-84b5-279cb142d67e\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: 205caf6f-f6c6-4683-b284-1a31a19e13e7
-  - id: Viz_4
-    answer:
-      name: Total Org Masked Revenue
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Org Masked Revenue] [Quantity]"
-      answer_columns:
-      - name: Total Org Masked Revenue
-      - name: Total Quantity
-      table:
-        table_columns:
-        - column_id: Total Org Masked Revenue
-          headline_aggregation: TABLE_AGGR
-        - column_id: Total Quantity
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Total Org Masked Revenue
-        - Total Quantity
-        client_state: ""
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Total Org Masked Revenue
-        - column_id: Total Quantity
-        axis_configs:
-        - "y":
-          - Total Org Masked Revenue
-        client_state: ""
-      display_mode: CHART_MODE
-    viz_guid: e13da074-6877-4aea-ad5f-858366e9fb26
   layout:
     tiles:
     - visualization_id: Viz_1
       size: MEDIUM
     - visualization_id: Viz_2
       size: MEDIUM
+    - visualization_id: Viz_3
+      size: EXTRA_SMALL
