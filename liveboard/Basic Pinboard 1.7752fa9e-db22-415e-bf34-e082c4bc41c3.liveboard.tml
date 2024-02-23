@@ -30,8 +30,8 @@ liveboard:
           - Lineorder PartKey - Part PartKey
       search_query: "[LINEORDER_1::Revenue] [PART_1::Color]"
       answer_columns:
-      - name: Color
       - name: Total Revenue
+      - name: Color
       table:
         table_columns:
         - column_id: Color
@@ -42,6 +42,7 @@ liveboard:
         - Color
         - Total Revenue
         client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
       chart:
         type: COLUMN
         chart_columns:
@@ -53,6 +54,7 @@ liveboard:
           "y":
           - Total Revenue
         client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"328ec9db-b11b-46e1-8796-3e0fe11abe2b\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"0489741c-2062-41c2-9e02-d02155200d28\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#06BF7F\"},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Color\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"328ec9db-b11b-46e1-8796-3e0fe11abe2b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"0489741c-2062-41c2-9e02-d02155200d28\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
     viz_guid: 1e99d70f-c1dc-4a52-9980-cfd4d14ba6d6
   - id: Viz_2
@@ -72,6 +74,7 @@ liveboard:
         ordered_column_ids:
         - Brand1
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -80,9 +83,12 @@ liveboard:
         - "y":
           - Brand1
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"29857252-e8be-4f38-861f-5d771e159c5e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Brand1\"],\"isOpposite\": false}},{\"id\": \"5626f12a-45b5-4db4-9364-9d66c26fef3e\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: TABLE_MODE
     viz_guid: ed572035-6807-4cff-bdd4-fe70b7e158bc
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: DEFAULT
+      size: MEDIUM
+    - visualization_id: Viz_2
+      size: LARGE
