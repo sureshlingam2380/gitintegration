@@ -96,9 +96,9 @@ liveboard:
         was_auto_generated: false
       search_query: "[Holiday YTD] = true [Revenue] [Quantity] [Color]"
       answer_columns:
+      - name: Color
       - name: Total Quantity
       - name: Total Revenue
-      - name: Color
       table:
         table_columns:
         - column_id: Color
@@ -143,9 +143,9 @@ liveboard:
         was_auto_generated: false
       search_query: "[Holiday YTD] = true [Revenue] [Quantity] [Color]"
       answer_columns:
-      - name: Total Revenue
-      - name: Total Quantity
       - name: Color
+      - name: Total Quantity
+      - name: Total Revenue
       table:
         table_columns:
         - column_id: Color
@@ -163,9 +163,9 @@ liveboard:
       chart:
         type: LINE
         chart_columns:
+        - column_id: Total Revenue
         - column_id: Color
         - column_id: Total Quantity
-        - column_id: Total Revenue
         axis_configs:
         - x:
           - Color
