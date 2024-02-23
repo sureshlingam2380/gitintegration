@@ -27,8 +27,8 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Brand1
         - column_id: Total Tax
+        - column_id: Brand1
         axis_configs:
         - x:
           - Brand1
@@ -67,9 +67,9 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
+        - column_id: Total Quantity
         - column_id: Category
         - column_id: Total Revenue
-        - column_id: Total Quantity
         axis_configs:
         - x:
           - Category
@@ -109,9 +109,9 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
+        - column_id: Category
         - column_id: Total Quantity
         - column_id: Total Revenue
-        - column_id: Category
         axis_configs:
         - x:
           - Category
