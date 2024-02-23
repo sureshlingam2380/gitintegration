@@ -94,7 +94,7 @@ liveboard:
         name: Holiday YTD
         expr: "month ( [Commit Date] ) <= month ( [Date List Param] ) and day ( [Commit Date] ) <= day ( [Date List Param] )"
         was_auto_generated: false
-      search_query: "[Holiday YTD] = true [Revenue] [Quantity] [Color]"
+      search_query: "[Holiday YTD] = true [] [] []"
       answer_columns:
       - name: Total Quantity
       - name: Total Revenue
@@ -141,7 +141,7 @@ liveboard:
         name: Holiday YTD
         expr: "month ( [Commit Date] ) <= month ( [Date List Param] ) and day ( [Commit Date] ) <= day ( [Date List Param] )"
         was_auto_generated: false
-      search_query: "[Holiday YTD] = true [Revenue] [Quantity] [Color]"
+      search_query: "[Holiday YTD] = true [] [] []"
       answer_columns:
       - name: Total Revenue
       - name: Total Quantity
