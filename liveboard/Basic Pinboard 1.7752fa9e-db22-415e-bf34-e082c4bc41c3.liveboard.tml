@@ -57,6 +57,33 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Color\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"328ec9db-b11b-46e1-8796-3e0fe11abe2b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"0489741c-2062-41c2-9e02-d02155200d28\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
     viz_guid: 1e99d70f-c1dc-4a52-9980-cfd4d14ba6d6
+  - id: Viz_2
+    answer:
+      name: Total Tax
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax]"
+      answer_columns:
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Tax
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Tax
+        axis_configs:
+        - "y":
+          - Total Tax
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: e1e25cae-f8a5-45b6-9b97-d7ac33a73dc2
   layout:
     tiles:
     - visualization_id: Viz_1
