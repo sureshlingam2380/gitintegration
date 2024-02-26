@@ -1,0 +1,36 @@
+guid: 9d6456a1-9e75-43f4-9626-589cad0dfa23
+liveboard:
+  name: newLB
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Discount, Total Extended Price"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Extended Price]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        - Total Extended Price
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Extended Price
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: ddc8c7c0-cecc-4432-826c-81cfadf9bb58
