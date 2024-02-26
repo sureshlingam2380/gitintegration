@@ -1,0 +1,41 @@
+guid: edb22da6-a64e-4550-93d5-506c280bc9c5
+liveboard:
+  name: Blue
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total lo_linenumber
+      tables:
+      - id: tpch5k_falcon_default_schema_lineorder
+        name: tpch5k_falcon_default_schema_lineorder
+        fqn: 45339b6b-5c81-4550-aa67-876895f09118
+      search_query: "[lo_linenumber] [lo_orderkey] [lo_partkey]"
+      answer_columns:
+      - name: Total lo_linenumber
+      - name: Total lo_orderkey
+      - name: Total lo_partkey
+      table:
+        table_columns:
+        - column_id: Total lo_linenumber
+          headline_aggregation: SUM
+        - column_id: Total lo_orderkey
+          headline_aggregation: SUM
+        - column_id: Total lo_partkey
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total lo_linenumber
+        - Total lo_orderkey
+        - Total lo_partkey
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total lo_linenumber
+        - column_id: Total lo_orderkey
+        - column_id: Total lo_partkey
+        axis_configs:
+        - "y":
+          - Total lo_linenumber
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 395a7be1-9f16-407c-961a-5a8b195c7db2
