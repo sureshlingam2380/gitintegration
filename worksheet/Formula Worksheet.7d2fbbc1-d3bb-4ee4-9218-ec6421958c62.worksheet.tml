@@ -1,0 +1,284 @@
+guid: 7d2fbbc1-d3bb-4ee4-9218-ec6421958c62
+worksheet:
+  name: Formula Worksheet
+  tables:
+  - name: CUSTOMER
+    fqn: 5de19354-710f-448e-8ed2-4315d926a264
+  - name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - name: SUPPLIER
+    fqn: 95158c5f-7805-48f0-8802-c727d1785a04
+  joins:
+  - name: Lineorder Suppkey - Supplier SuppKey
+    source: LINEORDER
+    destination: SUPPLIER
+    type: INNER
+    is_one_to_one: false
+  - name: Lineorder CustKey - Customer CustKey
+    source: LINEORDER
+    destination: CUSTOMER
+    type: INNER
+    is_one_to_one: false
+  table_paths:
+  - id: CUSTOMER_1
+    table: CUSTOMER
+    join_path:
+    - join:
+      - Lineorder CustKey - Customer CustKey
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: SUPPLIER_1
+    table: SUPPLIER
+    join_path:
+    - join:
+      - Lineorder Suppkey - Supplier SuppKey
+  formulas:
+  - name: complexarithmetic
+    expr: "( [LINEORDER_1::Revenue] / ( 1 + [LINEORDER_1::Tax] ) ) * [LINEORDER_1::Discount] + [LINEORDER_1::Line Number] * [LINEORDER_1::Supply Cost]"
+    was_auto_generated: false
+  - name: const1
+    expr: "1"
+    was_auto_generated: false
+  - name: const2
+    expr: "2"
+    was_auto_generated: false
+  - name: const3
+    expr: 1 + 2
+    was_auto_generated: false
+  - name: count(custkey)
+    expr: "count ( [CUSTOMER_1::Customer CustKey] )"
+    was_auto_generated: false
+  - name: custreg=asiaorcustreg=africa
+    expr: "[CUSTOMER_1::Customer Region] = 'asia' or [CUSTOMER_1::Customer Region] = 'africa'"
+    was_auto_generated: false
+  - name: day(orderdate)=15
+    expr: "day ( [LINEORDER_1::Order Date] ) = 15"
+    was_auto_generated: false
+  - name: discount+2
+    expr: "[LINEORDER_1::Discount] + 2"
+    was_auto_generated: false
+  - name: log10(rev)
+    expr: "log10 ( [LINEORDER_1::Revenue] )"
+    was_auto_generated: false
+  - name: month(commit date)
+    expr: "month_number ( [LINEORDER_1::Commit Date] )"
+    was_auto_generated: false
+  - name: monthlessmonth
+    expr: "month_number ( [LINEORDER_1::Order Date] ) < month_number ( [LINEORDER_1::Commit Date] ) + 1"
+    was_auto_generated: false
+  - name: rev+tax
+    expr: "[LINEORDER_1::Revenue] + [LINEORDER_1::Tax]"
+    was_auto_generated: false
+  - name: rev/tax-NaN
+    expr: "[LINEORDER_1::Revenue] / [LINEORDER_1::Tax]"
+    was_auto_generated: false
+  - name: sum(rev)-sum(tax)
+    expr: "sum ( [LINEORDER_1::Revenue] ) - sum ( [LINEORDER_1::Tax] ) > 500000"
+    was_auto_generated: false
+  - name: sum(rev)/sum(tax)
+    expr: "sum ( [LINEORDER_1::Revenue] ) / sum ( [LINEORDER_1::Tax] )"
+    was_auto_generated: false
+  - name: sum(rev)/sum(tax)>val
+    expr: "( sum ( [LINEORDER_1::Revenue] ) / sum ( [LINEORDER_1::Tax] ) ) > 500000"
+    was_auto_generated: false
+  - name: sum(rev)>10
+    expr: "sum ( [LINEORDER_1::Revenue] ) > 10"
+    was_auto_generated: false
+  - name: year(commit date)
+    expr: "year ( [LINEORDER_1::Commit Date] )"
+    was_auto_generated: false
+  worksheet_columns:
+  - name: Commit Date
+    column_id: LINEORDER_1::Commit Date
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy
+  - name: Discount
+    column_id: LINEORDER_1::Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Extended Price
+    column_id: LINEORDER_1::Extended Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Line Number
+    column_id: LINEORDER_1::Line Number
+    properties:
+      column_type: ATTRIBUTE
+  - name: Lineorder CustKey
+    column_id: LINEORDER_1::Lineorder CustKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Lineorder PartKey
+    column_id: LINEORDER_1::Lineorder PartKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Lineorder Suppkey
+    column_id: LINEORDER_1::Lineorder Suppkey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Order Date
+    column_id: LINEORDER_1::Order Date
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy
+  - name: Order Priority
+    column_id: LINEORDER_1::Order Priority
+    properties:
+      column_type: ATTRIBUTE
+  - name: Order Total Price
+    column_id: LINEORDER_1::Order Total Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: OrderKey
+    column_id: LINEORDER_1::OrderKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Quantity
+    column_id: LINEORDER_1::Quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Revenue
+    column_id: LINEORDER_1::Revenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Ship Mode
+    column_id: LINEORDER_1::Ship Mode
+    properties:
+      column_type: ATTRIBUTE
+  - name: Ship Priority
+    column_id: LINEORDER_1::Ship Priority
+    properties:
+      column_type: ATTRIBUTE
+  - name: Supply Cost
+    column_id: LINEORDER_1::Supply Cost
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Tax
+    column_id: LINEORDER_1::Tax
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Customer Region
+    column_id: CUSTOMER_1::Customer Region
+    properties:
+      column_type: ATTRIBUTE
+  - name: Market Segment
+    column_id: CUSTOMER_1::Market Segment
+    properties:
+      column_type: ATTRIBUTE
+  - name: Customer CustKey
+    column_id: CUSTOMER_1::Customer CustKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Supplier SuppKey
+    column_id: SUPPLIER_1::Supplier SuppKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Supplier Region
+    column_id: SUPPLIER_1::Supplier Region
+    properties:
+      column_type: ATTRIBUTE
+  - name: Supplier City
+    column_id: SUPPLIER_1::Supplier City
+    properties:
+      column_type: ATTRIBUTE
+  - name: rev+tax
+    formula_id: rev+tax
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: discount+2
+    formula_id: discount+2
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: rev/tax-NaN
+    formula_id: rev/tax-NaN
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: day(orderdate)=15
+    formula_id: day(orderdate)=15
+    properties:
+      column_type: ATTRIBUTE
+  - name: custreg=asiaorcustreg=africa
+    formula_id: custreg=asiaorcustreg=africa
+    properties:
+      column_type: ATTRIBUTE
+  - name: sum(rev)/sum(tax)
+    formula_id: sum(rev)/sum(tax)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: complexarithmetic
+    formula_id: complexarithmetic
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: log10(rev)
+    formula_id: log10(rev)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: sum(rev)>10
+    formula_id: sum(rev)>10
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: sum(rev)/sum(tax)>val
+    formula_id: sum(rev)/sum(tax)>val
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: sum(rev)-sum(tax)
+    formula_id: sum(rev)-sum(tax)
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: const1
+    formula_id: const1
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: const2
+    formula_id: const2
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: const3
+    formula_id: const3
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: monthlessmonth
+    formula_id: monthlessmonth
+    properties:
+      column_type: ATTRIBUTE
+  - name: month(commit date)
+    formula_id: month(commit date)
+    properties:
+      column_type: ATTRIBUTE
+      aggregation: SUM
+  - name: year(commit date)
+    formula_id: year(commit date)
+    properties:
+      column_type: ATTRIBUTE
+  - name: count(custkey)
+    formula_id: count(custkey)
+    properties:
+      column_type: MEASURE
+      aggregation: COUNT
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: false
