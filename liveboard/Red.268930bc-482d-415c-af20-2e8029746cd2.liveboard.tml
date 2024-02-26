@@ -1,0 +1,46 @@
+guid: 268930bc-482d-415c-af20-2e8029746cd2
+liveboard:
+  name: Red
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Extended Price, Total Order Total Price by Size"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Extended Price] [Order Total Price] [Size]"
+      answer_columns:
+      - name: Total Extended Price
+      - name: Total Order Total Price
+      - name: Size
+      table:
+        table_columns:
+        - column_id: Size
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Size
+        - Total Extended Price
+        - Total Order Total Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: WATERFALL
+        chart_columns:
+        - column_id: Size
+        - column_id: Total Extended Price
+        - column_id: Total Order Total Price
+        axis_configs:
+        - x:
+          - Size
+          "y":
+          - Total Extended Price
+          - Total Order Total Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Size\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"238e1ca3-f5e3-45ad-be13-d86c48bf2206\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"9c84c0cc-73bb-4478-bc7d-dc87f50ea3f2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": true}},{\"id\": \"25aeea91-7a7e-47f9-904e-2917aa3366c7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Size\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Order Total Price\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7e7214e0-4d70-4252-bd00-008b2ff3eff9
