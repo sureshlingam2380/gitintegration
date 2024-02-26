@@ -1,0 +1,60 @@
+guid: 174299da-d2f2-45e1-9d5e-95c7f054840c
+table:
+  name: tpch5k_falcon_default_schema_customer
+  db: DEVELOPMENT
+  schema: TS_dataset
+  db_table: tpch5k_falcon_default_schema_customer
+  connection:
+    name: sf
+    fqn: 739bc037-2077-43d2-b96a-ff5f0769be14
+  columns:
+  - name: c_custkey
+    db_column_name: c_custkey
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: c_name
+    db_column_name: c_name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: c_address
+    db_column_name: c_address
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: c_city
+    db_column_name: c_city
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: c_nation
+    db_column_name: c_nation
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: c_region
+    db_column_name: c_region
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: c_phone
+    db_column_name: c_phone
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: c_mktsegment
+    db_column_name: c_mktsegment
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR

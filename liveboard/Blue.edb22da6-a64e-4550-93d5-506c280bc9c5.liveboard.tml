@@ -39,3 +39,49 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 395a7be1-9f16-407c-961a-5a8b195c7db2
+  - id: Viz_2
+    answer:
+      name: "Total c_custkey by c_name, c_nation, c_region"
+      tables:
+      - id: tpch5k_falcon_default_schema_customer
+        name: tpch5k_falcon_default_schema_customer
+        fqn: 174299da-d2f2-45e1-9d5e-95c7f054840c
+      search_query: "[c_custkey] [c_name] [c_nation] [c_region]"
+      answer_columns:
+      - name: Total c_custkey
+      - name: c_name
+      - name: c_nation
+      - name: c_region
+      table:
+        table_columns:
+        - column_id: c_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: c_nation
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: c_region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total c_custkey
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - c_name
+        - c_nation
+        - c_region
+        - Total c_custkey
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: c_name
+        - column_id: c_nation
+        - column_id: c_region
+        - column_id: Total c_custkey
+        axis_configs:
+        - x:
+          - c_name
+          "y":
+          - Total c_custkey
+          color:
+          - c_region
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 21db1c81-56f7-4b4d-9914-b83f01012358
