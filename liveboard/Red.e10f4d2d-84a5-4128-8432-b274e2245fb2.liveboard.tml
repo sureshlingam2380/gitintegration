@@ -11,8 +11,8 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Tax] [Brand1]"
       answer_columns:
-      - name: Total Tax
       - name: Brand1
+      - name: Total Tax
       table:
         table_columns:
         - column_id: Brand1
@@ -27,8 +27,8 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Brand1
         - column_id: Total Tax
+        - column_id: Brand1
         axis_configs:
         - x:
           - Brand1
@@ -38,73 +38,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Brand1\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6b4ce1a1-0c4f-402f-81e6-cc518b7c6cc6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"d2582849-1f01-4fc4-b973-a97424013be5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#FF8142\"}]}"
       display_mode: CHART_MODE
     viz_guid: a0ad4426-3a30-45c0-977d-4dd5088a97dd
-  - id: Viz_2
-    answer:
-      name: "Quarterly Commit Date, Username"
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Commit Date] [Commit Date].quarterly [Username]"
-      answer_columns:
-      - name: Quarter(Commit Date)
-      - name: Username
-      table:
-        table_columns:
-        - column_id: Quarter(Commit Date)
-          headline_aggregation: MIN-MAX
-        - column_id: Username
-          headline_aggregation: COUNT_DISTINCT
-        ordered_column_ids:
-        - Quarter(Commit Date)
-        - Username
-        client_state: ""
-      chart:
-        type: SCATTER
-        chart_columns:
-        - column_id: Quarter(Commit Date)
-        - column_id: Username
-        axis_configs:
-        - x:
-          - Quarter(Commit Date)
-          "y":
-          - Username
-        client_state: ""
-      display_mode: TABLE_MODE
-    viz_guid: 3e9eed8a-11f7-48e2-8145-2d694b0cfe6e
-  - id: Viz_3
-    answer:
-      name: Total Revenue by Brand1
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Brand1] [Revenue]"
-      answer_columns:
-      - name: Brand1
-      - name: Total Revenue
-      table:
-        table_columns:
-        - column_id: Brand1
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Revenue
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Brand1
-        - Total Revenue
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: Brand1
-        - column_id: Total Revenue
-        axis_configs:
-        - x:
-          - Brand1
-          "y":
-          - Total Revenue
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d329dca0-f933-49f6-9b42-a0efd05d4237\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"16810af9-7d2d-42c8-9388-75fe62130e9a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: 21aad62a-d324-4a19-bf8f-56d4200b2986
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
