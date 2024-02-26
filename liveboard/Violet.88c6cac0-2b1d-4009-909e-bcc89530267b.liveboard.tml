@@ -11,8 +11,8 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Brand1] [Tax]"
       answer_columns:
-      - name: Brand1
       - name: Total Tax
+      - name: Brand1
       table:
         table_columns:
         - column_id: Brand1
@@ -47,9 +47,9 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Category] [Revenue] [Quantity]"
       answer_columns:
+      - name: Total Revenue
       - name: Total Quantity
       - name: Category
-      - name: Total Revenue
       table:
         table_columns:
         - column_id: Category
@@ -68,8 +68,8 @@ liveboard:
         type: COLUMN
         chart_columns:
         - column_id: Category
-        - column_id: Total Quantity
         - column_id: Total Revenue
+        - column_id: Total Quantity
         axis_configs:
         - x:
           - Category
@@ -89,9 +89,9 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Category] [Revenue] [Quantity]"
       answer_columns:
-      - name: Total Revenue
       - name: Category
       - name: Total Quantity
+      - name: Total Revenue
       table:
         table_columns:
         - column_id: Category
@@ -109,9 +109,9 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Total Quantity
-        - column_id: Total Revenue
         - column_id: Category
+        - column_id: Total Revenue
+        - column_id: Total Quantity
         axis_configs:
         - x:
           - Category
