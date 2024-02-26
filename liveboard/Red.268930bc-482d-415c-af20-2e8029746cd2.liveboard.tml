@@ -86,3 +86,30 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Line Number\",\"columnProperty\": {}},{\"columnId\": \"Total rev/tax-NaN\",\"columnProperty\": {}},{\"columnId\": \"Total rev+tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3759f266-18f9-4719-95e1-5a93fbe7acf8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total rev/tax-NaN\"],\"isOpposite\": false}},{\"id\": \"ae9b7d78-75c6-4371-a1d8-015c3ce9dfe6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total rev+tax\"],\"isOpposite\": true}},{\"id\": \"c54e60e7-9c3b-4fcf-8b7f-5267ae46e48e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Line Number\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total rev/tax-NaN\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total rev+tax\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: dc94aa60-eddd-4b6f-80b3-1967197470f9
+  - id: Viz_3
+    answer:
+      name: Total Quantity
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Quantity]"
+      answer_columns:
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Quantity
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Quantity
+        axis_configs:
+        - "y":
+          - Total Quantity
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: b2a50d35-179c-4023-95f1-158a24094ae3
