@@ -34,3 +34,39 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: ddc8c7c0-cecc-4432-826c-81cfadf9bb58
+  - id: Viz_2
+    answer:
+      name: Total Supply Cost by Brand1
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Brand1] [Supply Cost]"
+      answer_columns:
+      - name: Brand1
+      - name: Total Supply Cost
+      table:
+        table_columns:
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Brand1
+        - Total Supply Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Brand1
+        - column_id: Total Supply Cost
+        axis_configs:
+        - x:
+          - Brand1
+          "y":
+          - Total Supply Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4497fa51-d8d9-4613-a089-93464d1eea54\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"9e4318b8-c089-4ffc-a4d1-ed3a3e049cc0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Supply Cost\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2b9a0933-b5b4-4f2b-bb5c-10d034ba0ba9
