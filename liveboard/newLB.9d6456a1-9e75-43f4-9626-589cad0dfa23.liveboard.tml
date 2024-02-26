@@ -9,29 +9,36 @@ liveboard:
       - id: Parameters WS
         name: Parameters WS
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Discount] [Extended Price]"
+      search_query: "[Discount] [Extended Price] [Order Total Price]"
       answer_columns:
       - name: Total Discount
       - name: Total Extended Price
+      - name: Total Order Total Price
       table:
         table_columns:
         - column_id: Total Discount
           headline_aggregation: SUM
         - column_id: Total Extended Price
           headline_aggregation: SUM
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
         ordered_column_ids:
         - Total Discount
         - Total Extended Price
+        - Total Order Total Price
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
         - column_id: Total Discount
         - column_id: Total Extended Price
+        - column_id: Total Order Total Price
         axis_configs:
         - "y":
           - Total Discount
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a5786990-9e71-402c-a842-e87c04575014\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"e121b10b-e8d4-45ca-aca3-1a63acbe9de9\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: TABLE_MODE
     viz_guid: ddc8c7c0-cecc-4432-826c-81cfadf9bb58
   - id: Viz_2
