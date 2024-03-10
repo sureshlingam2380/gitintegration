@@ -11,9 +11,9 @@ liveboard:
         fqn: 4b8896eb-4c83-40f9-be54-c8164326958e
       search_query: "[COMPANY_KEY] [COMPANY_NAME] [STATE_NAME]"
       answer_columns:
-      - name: STATE_NAME
-      - name: COMPANY_NAME
       - name: COMPANY_KEY
+      - name: COMPANY_NAME
+      - name: STATE_NAME
       table:
         table_columns:
         - column_id: COMPANY_KEY
@@ -42,7 +42,7 @@ liveboard:
           category:
           - COMPANY_KEY
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"COMPANY_NAME\",\"columnProperty\": {}},{\"columnId\": \"COMPANY_KEY\",\"columnProperty\": {}},{\"columnId\": \"STATE_NAME\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b756d8b7-b80c-4922-bb63-f7831b66881d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"STATE_NAME\"],\"isOpposite\": false}},{\"id\": \"90e7214f-db6f-4033-891c-ced5957deea8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"COMPANY_NAME\"]}}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"COMPANY_NAME\",\"columnProperty\": {}},{\"columnId\": \"COMPANY_KEY\",\"columnProperty\": {}},{\"columnId\": \"STATE_NAME\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8bbdc169-f8a0-444e-965a-ee0a947f3ee6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"STATE_NAME\"],\"isOpposite\": false}},{\"id\": \"080398a3-518e-48a8-88e3-46c619c88e19\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"COMPANY_NAME\"]}}]}"
       display_mode: TABLE_MODE
     viz_guid: 29e10b4b-8481-4d1a-b1af-d41989bbc73c
   layout:
