@@ -28,6 +28,7 @@ liveboard:
         ordered_column_ids:
         - Total Partial Revenue
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Partial Revenue\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -36,6 +37,7 @@ liveboard:
         - "y":
           - Total Partial Revenue
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2c986732-d024-4d72-99a1-8285bd7f2f5e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Revenue\"],\"isOpposite\": false}},{\"id\": \"98b61a0c-3a8a-43c0-9a29-ac0788be62fb\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: db0badd5-47c6-400a-842d-133a7b44d435
   - id: Viz_2
@@ -68,6 +70,7 @@ liveboard:
         ordered_column_ids:
         - Total Partial Quantity
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -76,6 +79,7 @@ liveboard:
         - "y":
           - Total Partial Quantity
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fd0b79c9-1bea-4348-be51-4ba3fb4fa689\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Quantity\"],\"isOpposite\": false}},{\"id\": \"ee8aa212-57e1-4d79-9c27-1b1d3dd0da10\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: 43c9f421-410f-4564-b624-2b3acc4ea8cd
   - id: Viz_3
@@ -112,9 +116,9 @@ liveboard:
       chart:
         type: LINE
         chart_columns:
+        - column_id: Total Quantity
         - column_id: Color
         - column_id: Total Revenue
-        - column_id: Total Quantity
         axis_configs:
         - x:
           - Color
@@ -140,8 +144,8 @@ liveboard:
       search_query: "[Holiday YTD] = true [Revenue] [Quantity] [Color]"
       answer_columns:
       - name: Total Revenue
-      - name: Total Quantity
       - name: Color
+      - name: Total Quantity
       table:
         table_columns:
         - column_id: Color
@@ -159,9 +163,9 @@ liveboard:
       chart:
         type: LINE
         chart_columns:
-        - column_id: Color
         - column_id: Total Revenue
         - column_id: Total Quantity
+        - column_id: Color
         axis_configs:
         - x:
           - Color
