@@ -11,9 +11,9 @@ liveboard:
         fqn: 4b8896eb-4c83-40f9-be54-c8164326958e
       search_query: "[COMPANY_KEY] [COMPANY_NAME] [STATE_NAME]"
       answer_columns:
-      - name: COMPANY_KEY
-      - name: COMPANY_NAME
       - name: STATE_NAME
+      - name: COMPANY_NAME
+      - name: COMPANY_KEY
       table:
         table_columns:
         - column_id: COMPANY_KEY
@@ -27,11 +27,12 @@ liveboard:
         - COMPANY_NAME
         - STATE_NAME
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"COMPANY_KEY\",\"columnProperty\": {}},{\"columnId\": \"COMPANY_NAME\",\"columnProperty\": {}},{\"columnId\": \"STATE_NAME\",\"columnProperty\": {}}]}"
       chart:
         type: SCATTER
         chart_columns:
-        - column_id: COMPANY_KEY
         - column_id: COMPANY_NAME
+        - column_id: COMPANY_KEY
         - column_id: STATE_NAME
         axis_configs:
         - x:
@@ -41,32 +42,10 @@ liveboard:
           category:
           - COMPANY_KEY
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"COMPANY_NAME\",\"columnProperty\": {}},{\"columnId\": \"COMPANY_KEY\",\"columnProperty\": {}},{\"columnId\": \"STATE_NAME\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b756d8b7-b80c-4922-bb63-f7831b66881d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"STATE_NAME\"],\"isOpposite\": false}},{\"id\": \"90e7214f-db6f-4033-891c-ced5957deea8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"COMPANY_NAME\"]}}]}"
       display_mode: TABLE_MODE
     viz_guid: 29e10b4b-8481-4d1a-b1af-d41989bbc73c
-  - id: Viz_2
-    answer:
-      name: Total Purchase Id
-      tables:
-      - id: Chasmtrap
-        name: Chasmtrap
-        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
-      search_query: "[Purchase Id]"
-      answer_columns:
-      - name: Total Purchase Id
-      table:
-        table_columns:
-        - column_id: Total Purchase Id
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Total Purchase Id
-        client_state: ""
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Total Purchase Id
-        axis_configs:
-        - "y":
-          - Total Purchase Id
-        client_state: ""
-      display_mode: CHART_MODE
-    viz_guid: b4671148-a040-40bf-a4ac-e0546e63507b
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: LARGE
