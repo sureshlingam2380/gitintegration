@@ -1,0 +1,47 @@
+guid: 6be6e592-16ca-4e02-9326-874f50054034
+liveboard:
+  name: Green
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Purchase Id by sales Product Id and Product Name
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[Purchase Id] [Product Name] [sales Product Id]"
+      answer_columns:
+      - name: Total Purchase Id
+      - name: Product Name
+      - name: sales Product Id
+      table:
+        table_columns:
+        - column_id: Product Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: sales Product Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Purchase Id
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Product Name
+        - sales Product Id
+        - Total Purchase Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Name
+        - column_id: sales Product Id
+        - column_id: Total Purchase Id
+        axis_configs:
+        - x:
+          - sales Product Id
+          "y":
+          - Total Purchase Id
+          color:
+          - Product Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"sales Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Purchase Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5d0abbea-481b-4121-870d-4bcf06bc74a1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Purchase Id\"],\"isOpposite\": false}},{\"id\": \"874bb400-8e97-4332-a97f-9509d2e9b42d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"sales Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"ipad\",\"color\": \"#FCC838\"},{\"serieName\": \"pc\",\"color\": \"#48D1E0\"},{\"serieName\": \"tv\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 590aa436-dfaf-4283-8a15-4811d0c34709
