@@ -1,0 +1,42 @@
+guid: 88d67cfe-969e-4d24-ac21-e3026f68d16b
+answer:
+  name: Answer Red
+  tables:
+  - id: rls_sales_fact
+    name: rls_sales_fact
+    fqn: c9ba7f46-a9f7-4ef6-9a48-a5a345c1ff97
+  search_query: "[SALE_PRICE] [SALE_CHANNEL_ID] [SALE_LISCENCE_END] [SALE_LISCENCE_END].monthly"
+  answer_columns:
+  - name: Total SALE_PRICE
+  - name: SALE_CHANNEL_ID
+  - name: Month(SALE_LISCENCE_END)
+  table:
+    table_columns:
+    - column_id: SALE_CHANNEL_ID
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(SALE_LISCENCE_END)
+      headline_aggregation: MIN-MAX
+    - column_id: Total SALE_PRICE
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - SALE_CHANNEL_ID
+    - Month(SALE_LISCENCE_END)
+    - Total SALE_PRICE
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: SALE_CHANNEL_ID
+    - column_id: Month(SALE_LISCENCE_END)
+    - column_id: Total SALE_PRICE
+    axis_configs:
+    - x:
+      - Month(SALE_LISCENCE_END)
+      "y":
+      - Total SALE_PRICE
+      color:
+      - SALE_CHANNEL_ID
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"SALE_CHANNEL_ID\",\"columnProperty\": {}},{\"columnId\": \"Month(SALE_LISCENCE_END)\",\"columnProperty\": {}},{\"columnId\": \"Total SALE_PRICE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"761bd6cb-5f5d-4d46-8a5f-dc843f3e8998\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total SALE_PRICE\"],\"isOpposite\": false}},{\"id\": \"0e29a2b9-0976-47ea-b26e-b23bbf68a627\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(SALE_LISCENCE_END)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#2E75F0\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"}]}"
+  display_mode: CHART_MODE
