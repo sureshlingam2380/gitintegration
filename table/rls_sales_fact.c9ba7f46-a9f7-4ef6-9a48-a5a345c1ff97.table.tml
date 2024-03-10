@@ -1,0 +1,133 @@
+guid: c9ba7f46-a9f7-4ef6-9a48-a5a345c1ff97
+table:
+  name: rls_sales_fact
+  db: rls_test
+  schema: falcon_default_schema
+  db_table: rls_sales_fact
+  columns:
+  - name: SALE_CUSTOMER
+    db_column_name: SALE_CUSTOMER
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SALE_PRODUCT_NAME
+    db_column_name: SALE_PRODUCT_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SALE_PRICE
+    db_column_name: SALE_PRICE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      format_pattern: "#,###"
+    db_column_properties:
+      data_type: INT64
+  - name: SALE_DISCOUNT
+    db_column_name: SALE_DISCOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      format_pattern: "#,###"
+    db_column_properties:
+      data_type: INT64
+  - name: SALE_LISCENCE_START
+    db_column_name: SALE_LISCENCE_START
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: SALE_LISCENCE_END
+    db_column_name: SALE_LISCENCE_END
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: SALE_PRODUCT_ID
+    db_column_name: SALE_PRODUCT_ID
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: "#,###"
+    db_column_properties:
+      data_type: INT32
+  - name: SALE_DETAIL_ID
+    db_column_name: SALE_DETAIL_ID
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: "#,###"
+    db_column_properties:
+      data_type: INT32
+  - name: SALE_CHANNEL_ID
+    db_column_name: SALE_CHANNEL_ID
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: "#,###"
+    db_column_properties:
+      data_type: INT32
+  rls_rules:
+    tables:
+    - name: rls_sales_detail_general
+      fqn: 6fc92c45-cfdc-43b7-a1e9-7e54a4f41b95
+    - name: rls_sales_detail_mapping
+      fqn: 9f0bbef2-a527-4c5e-b16f-d76a0cc36316
+    - name: rls_sales_fact
+      fqn: c9ba7f46-a9f7-4ef6-9a48-a5a345c1ff97
+    joins:
+    - name: SALE_DETAIL_ID - SALE_DETAIL_ID
+      source: rls_sales_detail_general
+      destination: rls_sales_detail_mapping
+      type: INNER
+      is_one_to_one: false
+    - id: SALE_DETAIL_ID - SALE_DETAIL_ID_1
+      name: SALE_DETAIL_ID - SALE_DETAIL_ID
+      source: rls_sales_fact
+      destination: rls_sales_detail_general
+      type: INNER
+      is_one_to_one: false
+    table_paths:
+    - id: rls_sales_detail_mapping_1
+      table: rls_sales_detail_mapping
+      join_path:
+      - join:
+        - SALE_DETAIL_ID - SALE_DETAIL_ID_1
+        - SALE_DETAIL_ID - SALE_DETAIL_ID
+      column:
+      - GROUP_NAME
+    rules:
+    - name: sales-mapping-rule
+      expr: "[rls_sales_detail_mapping_1::GROUP_NAME] = ts_groups"
+  joins_with:
+  - name: SALE_CHANNEL_ID - CHANNEL_ID
+    destination:
+      name: rls_channel_general
+      fqn: 3bde4cc0-2d58-4c84-81be-5438c9c90d10
+    "on": "[rls_sales_fact::SALE_CHANNEL_ID] = [rls_channel_general::CHANNEL_ID]"
+    type: INNER
+  - name: SALE_DETAIL_ID - SALE_DETAIL_ID
+    destination:
+      name: rls_sales_detail_general
+      fqn: 6fc92c45-cfdc-43b7-a1e9-7e54a4f41b95
+    "on": "[rls_sales_fact::SALE_DETAIL_ID] = [rls_sales_detail_general::SALE_DETAIL_ID]"
+    type: INNER
+  - name: SALE_LISCENCE_END - DATE_DATEKEY
+    destination:
+      name: rls_date_general
+      fqn: 9c358115-372e-4da6-aad2-ed9dc01bec20
+    "on": "[rls_sales_fact::SALE_LISCENCE_END] = [rls_date_general::DATE_DATEKEY]"
+    type: INNER
+  - name: SALE_LISCENCE_START - DATE_DATEKEY
+    destination:
+      name: rls_date_general
+      fqn: 9c358115-372e-4da6-aad2-ed9dc01bec20
+    "on": "[rls_sales_fact::SALE_LISCENCE_START] = [rls_date_general::DATE_DATEKEY]"
+    type: INNER
+  - name: SALE_PRODUCT_ID - PRODUCT_ID
+    destination:
+      name: rls_products_general
+      fqn: 5a2c4992-2259-4738-9c08-0faace3a4037
+    "on": "[rls_sales_fact::SALE_PRODUCT_ID] = [rls_products_general::PRODUCT_ID]"
+    type: INNER

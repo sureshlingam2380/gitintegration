@@ -1,0 +1,20 @@
+guid: 9f0bbef2-a527-4c5e-b16f-d76a0cc36316
+table:
+  name: rls_sales_detail_mapping
+  db: rls_test
+  schema: falcon_default_schema
+  db_table: rls_sales_detail_mapping
+  columns:
+  - name: SALE_DETAIL_ID
+    db_column_name: SALE_DETAIL_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: GROUP_NAME
+    db_column_name: GROUP_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
