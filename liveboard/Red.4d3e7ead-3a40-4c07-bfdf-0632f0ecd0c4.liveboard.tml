@@ -43,3 +43,30 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: 29e10b4b-8481-4d1a-b1af-d41989bbc73c
+  - id: Viz_2
+    answer:
+      name: Total Purchase Id
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[Purchase Id]"
+      answer_columns:
+      - name: Total Purchase Id
+      table:
+        table_columns:
+        - column_id: Total Purchase Id
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Purchase Id
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Purchase Id
+        axis_configs:
+        - "y":
+          - Total Purchase Id
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: b4671148-a040-40bf-a4ac-e0546e63507b
