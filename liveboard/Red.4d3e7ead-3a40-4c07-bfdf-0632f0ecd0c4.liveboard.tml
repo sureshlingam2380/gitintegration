@@ -1,0 +1,45 @@
+guid: 4d3e7ead-3a40-4c07-bfdf-0632f0ecd0c4
+liveboard:
+  name: Red
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "COMPANY_KEY, COMPANY_NAME, STATE_NAME"
+      tables:
+      - id: SUPPLY
+        name: SUPPLY
+        fqn: 4b8896eb-4c83-40f9-be54-c8164326958e
+      search_query: "[COMPANY_KEY] [COMPANY_NAME] [STATE_NAME]"
+      answer_columns:
+      - name: COMPANY_KEY
+      - name: COMPANY_NAME
+      - name: STATE_NAME
+      table:
+        table_columns:
+        - column_id: COMPANY_KEY
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: COMPANY_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: STATE_NAME
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - COMPANY_KEY
+        - COMPANY_NAME
+        - STATE_NAME
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: COMPANY_KEY
+        - column_id: COMPANY_NAME
+        - column_id: STATE_NAME
+        axis_configs:
+        - x:
+          - COMPANY_NAME
+          "y":
+          - STATE_NAME
+          category:
+          - COMPANY_KEY
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 29e10b4b-8481-4d1a-b1af-d41989bbc73c
